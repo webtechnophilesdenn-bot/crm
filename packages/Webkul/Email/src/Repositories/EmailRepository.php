@@ -32,7 +32,7 @@ class EmailRepository extends Repository
      */
     public function create(array $data)
     {
-        $uniqueId = time() . '@' . config('mail.domain');
+        $uniqueId = time().'@'.config('mail.domain');
 
         $referenceIds = [];
 
