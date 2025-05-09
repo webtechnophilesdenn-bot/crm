@@ -22,7 +22,7 @@
     <script type="module">
         app.component('v-tinymce', {
             template: '#v-tinymce-template',
-                
+
             props: ['selector', 'field'],
 
             data() {
@@ -36,12 +36,12 @@
             },
 
             mounted() {
+                this.destroyTinymceInstance();
+
                 this.init();
 
                 this.$emitter.on('change-theme', (theme) => {
-                    if (tinymce.activeEditor) {
-                        tinymce.activeEditor.destroy();
-                    }
+                    this.destroyTinymceInstance();
 
                     this.currentSkin = (theme === 'dark') ? 'oxide-dark' : 'oxide';
                     this.currentContentCSS = (theme === 'dark') ? 'dark' : 'default';
@@ -51,6 +51,14 @@
             },
 
             methods: {
+                destroyTinymceInstance() {
+                    if (! tinymce.activeEditor) {
+                        return;
+                    }
+
+                    tinymce.activeEditor.destroy();
+                },
+
                 init() {
                     let self = this;
 
@@ -58,7 +66,7 @@
                         initTinyMCE: function(extraConfiguration) {
                             let self2 = this;
 
-                            let config = {  
+                            let config = {
                                 relative_urls: false,
                                 menubar: false,
                                 remove_script_host: false,
