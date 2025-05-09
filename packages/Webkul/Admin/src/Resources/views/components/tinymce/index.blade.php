@@ -135,7 +135,7 @@
                                 let json;
 
                                 if (xhr.status === 403) {
-                                    reject("@lang('admin::app.error.tinymce.http-error')", {
+                                    reject("@lang('admin::app.components.tiny-mce.http-error')", {
                                         remove: true
                                     });
 
@@ -143,7 +143,7 @@
                                 }
 
                                 if (xhr.status < 200 || xhr.status >= 300) {
-                                    reject("@lang('admin::app.error.tinymce.http-error')");
+                                    reject("@lang('admin::app.components.tiny-mce.http-error')");
 
                                     return;
                                 }
@@ -151,7 +151,7 @@
                                 json = JSON.parse(xhr.responseText);
 
                                 if (! json || typeof json.location != 'string') {
-                                    reject("@lang('admin::app.error.tinymce.invalid-json')" + xhr.responseText);
+                                    reject("@lang('admin::app.components.tiny-mce.invalid-json')" + xhr.responseText);
 
                                     return;
                                 }
@@ -159,7 +159,7 @@
                                 resolve(json.location);
                             };
 
-                            xhr.onerror = (()=>reject("@lang('admin::app.error.tinymce.upload-failed')"));
+                            xhr.onerror = (()=>reject("@lang('admin::app.components.tiny-mce.upload-failed')"));
 
                             formData = new FormData();
                             formData.append('_token', config.csrfToken);

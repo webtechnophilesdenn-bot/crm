@@ -415,6 +415,12 @@ return [
             'warning' => 'تحذير',
             'info'    => 'معلومات',
         ],
+
+        'tiny-mce' => [
+            'http-error'    => 'خطأ في HTTP',
+            'invalid-json'  => 'استجابة JSON غير صالحة من الخادم.',
+            'upload-failed' => 'فشل تحميل الملف. يرجى المحاولة مرة أخرى.',
+        ],
     ],
 
     'quotes' => [
@@ -2017,7 +2023,7 @@ return [
                 'title' => 'حول الفرصة',
             ],
 
-            'quotes'=> [
+            'quotes' => [
                 'subject'         => 'الموضوع',
                 'expired-at'      => 'تنتهي في',
                 'sub-total'       => 'المجموع الفرعي',

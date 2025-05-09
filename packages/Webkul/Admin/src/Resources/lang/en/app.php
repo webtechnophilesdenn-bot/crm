@@ -417,6 +417,12 @@ return [
             'warning' => 'Warning',
             'info'    => 'Info',
         ],
+
+        'tiny-mce' => [
+            'http-error'    => 'HTTP Error',
+            'invalid-json'  => 'Invalid JSON response from the server.',
+            'upload-failed' => 'File upload failed. Please try again.',
+        ],
     ],
 
     'quotes' => [

@@ -419,6 +419,12 @@ return [
             'warning' => 'Advertencia',
             'info'    => 'Información',
         ],
+
+        'tiny-mce' => [
+            'http-error'    => 'Error HTTP',
+            'invalid-json'  => 'Respuesta JSON no válida del servidor.',
+            'upload-failed' => 'Error al subir el archivo. Por favor, inténtelo de nuevo.',
+        ],
     ],
 
     'quotes' => [
@@ -2020,7 +2026,7 @@ return [
                 'title' => 'Sobre el Lead',
             ],
 
-            'quotes'=> [
+            'quotes' => [
                 'subject'         => 'Asunto',
                 'expired-at'      => 'Expirado En',
                 'sub-total'       => 'Subtotal',

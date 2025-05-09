@@ -419,6 +419,12 @@ return [
             'warning' => 'هشدار',
             'info'    => 'اطلاعات',
         ],
+
+        'tiny-mce' => [
+            'http-error'    => 'خطای HTTP',
+            'invalid-json'  => 'پاسخ JSON نامعتبر از سرور.',
+            'upload-failed' => 'آپلود فایل ناموفق بود. لطفاً دوباره تلاش کنید.',
+        ],
     ],
 
     'quotes' => [
@@ -2021,7 +2027,7 @@ return [
                 'title' => 'درباره سرنخ',
             ],
 
-            'quotes'=> [
+            'quotes' => [
                 'subject'         => 'موضوع',
                 'expired-at'      => 'تاریخ انقضا',
                 'sub-total'       => 'جمع جزئی',

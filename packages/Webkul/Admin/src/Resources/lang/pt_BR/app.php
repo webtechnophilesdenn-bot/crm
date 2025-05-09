@@ -413,6 +413,12 @@ return [
             'warning' => 'Aviso',
             'info'    => 'Informação',
         ],
+
+        'tiny-mce' => [
+            'http-error'    => 'Erro HTTP',
+            'invalid-json'  => 'Resposta JSON inválida do servidor.',
+            'upload-failed' => 'Falha no upload do arquivo. Por favor, tente novamente.',
+        ],
     ],
 
     'quotes' => [
@@ -1906,7 +1912,7 @@ return [
                 'title' => 'Sobre o Negócio',
             ],
 
-            'quotes'=> [
+            'quotes' => [
                 'subject'         => 'Assunto',
                 'expired-at'      => 'Expirado em',
                 'sub-total'       => 'Subtotal',
