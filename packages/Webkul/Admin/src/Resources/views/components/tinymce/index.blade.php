@@ -205,7 +205,9 @@
                                 }
                             });
 
-                            editor.on('keyup', () => this.field.onInput(editor.getContent()));
+                            ['change', 'paste', 'keyup'].forEach((event) => {
+                                editor.on(event, () => this.field.onInput(editor.getContent()));
+                            });
                         }
                     });
                 },
