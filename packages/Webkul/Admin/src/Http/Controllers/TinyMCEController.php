@@ -2,6 +2,8 @@
 
 namespace Webkul\Admin\Http\Controllers;
 
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 use Webkul\Core\Traits\Sanitizer;
 
@@ -11,17 +13,13 @@ class TinyMCEController extends Controller
 
     /**
      * Storage folder path.
-     *
-     * @var string
      */
-    private $storagePath = 'tinymce';
+    private string $storagePath = 'tinymce';
 
     /**
      * Upload file from tinymce.
-     *
-     * @return void
      */
-    public function upload()
+    public function upload(): JsonResponse
     {
         $media = $this->storeMedia();
 
@@ -36,10 +34,8 @@ class TinyMCEController extends Controller
 
     /**
      * Store media.
-     *
-     * @return array
      */
-    public function storeMedia()
+    public function storeMedia(): array
     {
         if (! request()->hasFile('file')) {
             return [];
@@ -47,9 +43,15 @@ class TinyMCEController extends Controller
 
         $file = request()->file('file');
 
-        $path = $file->store($this->storagePath);
+        if (! $file instanceof UploadedFile) {
+            return [];
+        }
 
-        $this->sanitizeSVG($path, $file->getMimeType());
+        $filename = md5($file->getClientOriginalName().time()).'.'.$file->getClientOriginalExtension();
+
+        $path = $file->storeAs($this->storagePath, $filename);
+
+        $this->sanitizeSVG($path, $file);
 
         return [
             'file'      => $path,

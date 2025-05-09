@@ -2,47 +2,80 @@
 
 namespace Webkul\Core\Traits;
 
+use enshrined\svgSanitize\data\AllowedAttributes;
+use enshrined\svgSanitize\data\AllowedTags;
 use enshrined\svgSanitize\Sanitizer as MainSanitizer;
+use Exception;
+use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 
+/**
+ * Trait for sanitizing SVG uploads to prevent security vulnerabilities.
+ */
 trait Sanitizer
 {
     /**
-     * List of mime types which needs to check.
+     * Sanitize an SVG file to remove potentially malicious content.
      */
-    public $mimeTypes = [
-        'image/svg',
-        'image/svg+xml',
-    ];
-
-    /**
-     * Sanitize SVG file.
-     *
-     * @param  string  $path
-     * @return void
-     */
-    public function sanitizeSVG($path, $mimeType)
+    public function sanitizeSvg(string $path, UploadedFile $file): void
     {
-        if ($this->checkMimeType($mimeType)) {
-            /* sanitizer instance */
+        if (! $this->isSvgFile($file)) {
+            return;
+        }
+
+        try {
+            $svgContent = Storage::get($path);
+
+            if (! $svgContent) {
+                return;
+            }
+
             $sanitizer = new MainSanitizer;
+            $sanitizer->setAllowedAttrs(new AllowedAttributes);
+            $sanitizer->setAllowedTags(new AllowedTags);
 
-            /* grab svg file */
-            $dirtySVG = Storage::get($path);
+            $sanitizer->minify(true);
+            $sanitizer->removeRemoteReferences(true);
+            $sanitizer->removeXMLTag(true);
 
-            /* save sanitized svg */
-            Storage::put($path, $sanitizer->sanitize($dirtySVG));
+            $sanitizer->setXMLOptions(LIBXML_NONET | LIBXML_NOBLANKS);
+
+            $sanitizedContent = $sanitizer->sanitize($svgContent);
+
+            if ($sanitizedContent === false) {
+                $patterns = [
+                    '/<script\b[^>]*>(.*?)<\/script>/is',
+                    '/\bon\w+\s*=\s*["\'][^"\']*["\']/i',
+                    '/javascript\s*:/i',
+                    '/data\s*:[^,]*base64/i',
+                ];
+
+                $sanitizedContent = $svgContent;
+
+                foreach ($patterns as $pattern) {
+                    $sanitizedContent = preg_replace($pattern, '', $sanitizedContent);
+                }
+
+                Storage::put($path, $sanitizedContent);
+
+                return;
+            }
+
+            $sanitizedContent = preg_replace('/(<script.*?>.*?<\/script>)|(\son\w+\s*=\s*["\'][^"\']*["\'])/is', '', $sanitizedContent);
+
+            Storage::put($path, $sanitizedContent);
+        } catch (Exception $e) {
+            report($e->getMessage());
+
+            Storage::delete($path);
         }
     }
 
     /**
-     * Sanitize SVG file.
-     *
-     * @param  string  $path
-     * @return void
+     * Check if the uploaded file is an SVG based on both extension and mime type.
      */
-    public function checkMimeType($mimeType)
+    public function isSvgFile(UploadedFile $file): bool
     {
-        return in_array($mimeType, $this->mimeTypes);
+        return str_contains(strtolower($file->getClientOriginalExtension()), 'svg');
     }
 }
