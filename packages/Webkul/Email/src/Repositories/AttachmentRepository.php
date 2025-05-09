@@ -2,8 +2,8 @@
 
 namespace Webkul\Email\Repositories;
 
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Storage;
 use Webkul\Core\Eloquent\Repository;
 use Webkul\Email\Contracts\Attachment;
 use Webkul\Email\Contracts\Email;
@@ -49,7 +49,7 @@ class AttachmentRepository extends Repository
      */
     private function prepareData(Email $email, UploadedFile $attachment): array
     {
-        $path = 'emails/' . $email->id . '/' . $attachment->getClientOriginalName();
+        $path = 'emails/'.$email->id.'/'.$attachment->getClientOriginalName();
 
         Storage::put($path, $attachment->getContent());
 
