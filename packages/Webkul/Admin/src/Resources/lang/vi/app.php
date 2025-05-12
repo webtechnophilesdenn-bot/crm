@@ -418,6 +418,12 @@ return [
             'warning' => 'Cảnh báo',
             'info'    => 'Thông tin',
         ],
+
+        'tiny-mce' => [
+            'http-error'    => 'Lỗi HTTP',
+            'invalid-json'  => 'Phản hồi JSON không hợp lệ từ máy chủ.',
+            'upload-failed' => 'Tải tệp lên không thành công. Vui lòng thử lại.',
+        ],
     ],
 
     'quotes' => [
@@ -1916,7 +1922,7 @@ return [
                 'title' => 'Về Khách Hàng Tiềm Năng',
             ],
 
-            'quotes'=> [
+            'quotes' => [
                 'subject'         => 'Chủ Đề',
                 'expired-at'      => 'Hết Hạn Vào',
                 'sub-total'       => 'Tạm Tính',

@@ -421,6 +421,12 @@ return [
             'warning' => 'Uyarı',
             'info'    => 'Bilgi',
         ],
+
+        'tiny-mce' => [
+            'http-error'    => 'HTTP Hatası',
+            'invalid-json'  => 'Sunucudan geçersiz JSON yanıtı.',
+            'upload-failed' => 'Dosya yüklemesi başarısız oldu. Lütfen tekrar deneyin.',
+        ],
     ],
 
     'quotes' => [
