@@ -63,7 +63,7 @@ class DataGridExport implements FromQuery, ShouldAutoSize, WithHeadings, WithMap
     {
         $decoded = json_decode($json, true);
 
-        if (json_last_error() === JSON_ERROR_NONE 
+        if (json_last_error() === JSON_ERROR_NONE
             && is_array($decoded)) {
             return collect($decoded)->pluck('value')->implode(', ');
         }
