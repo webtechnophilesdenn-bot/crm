@@ -1,14 +1,33 @@
-## **v2.1.0 (26th of March 2025)** - *Release*
+
+## **v2.1.0 (14th of May 2025)** - *Release*
 
 * Mobile responsive pages.
 
-* Ability to create lead via pdf or images.
+* Ability to create leads via pdf or images.
 
 * IMAP integration.
 
 * Playwright support.
 
-* Marketing feature for creating events and campaign.
+* Marketing feature for creating events and campaigns.
+
+* #2195[fixed] Migration fails on new setup.
+  
+* #2189[fixed] Incomplete installation instructions in Readme.md.
+
+* #2185[fixed] Internal ACL labels visible on Role Edit/Create page.
+  
+* #2184[fixed] Error 500 when creating lead or contact.
+  
+* #2183[fixed] Email view error.
+  
+* #2181[fixed] Error installing REST API `krayin/rest-api`.
+  
+* #2180[fixed] DB migrations fail during installation.
+  
+* #2178[fixed] Cannot create person with non-Administrator role.
+  
+* #2173[fixed] Condition operator text cut off in workflow automation.
 
 ## **v2.0.6 (20th of March 2025)** - *Release*
 
