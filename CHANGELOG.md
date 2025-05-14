@@ -1,33 +1,38 @@
+## **v2.1.1 (14 of May 2025)** - *Release*
 
-## **v2.1.0 (14th of May 2025)** - *Release*
+* Added contact visibility control for individual accounts across different groups.
+
+* Introduced dashboard pie chart features for better data visualization.
+
+* #2195.[fixed]. Resolved migration failure on new setup.
+  
+* #2189.[fixed]. Addressed missing installation instructions in Readme.md.
+  
+* #2185.[fixed]. Corrected display of internal ACL labels on Role Edit/Create page.
+  
+* #2184.[fixed]. Eliminated error 500 when creating lead or contact.
+  
+* #2183.[fixed]. Repaired issue with email view rendering.
+  
+* #2181.[fixed]. Handled installation error in `krayin/rest-api`.
+  
+* #2180.[fixed]. Fixed database migration failure during installation.
+  
+* #2178.[fixed]. Enabled person creation for roles other than Administrator.
+  
+* #2173.[fixed]. Improved condition operator input visibility in workflow automation.
+
+## **v2.1.0 (26th of March 2025)** - *Release*
 
 * Mobile responsive pages.
 
-* Ability to create leads via pdf or images.
+* Ability to create lead via pdf or images.
 
 * IMAP integration.
 
 * Playwright support.
 
-* Marketing feature for creating events and campaigns.
-
-* #2195[fixed] Migration fails on new setup.
-  
-* #2189[fixed] Incomplete installation instructions in Readme.md.
-
-* #2185[fixed] Internal ACL labels visible on Role Edit/Create page.
-  
-* #2184[fixed] Error 500 when creating lead or contact.
-  
-* #2183[fixed] Email view error.
-  
-* #2181[fixed] Error installing REST API `krayin/rest-api`.
-  
-* #2180[fixed] DB migrations fail during installation.
-  
-* #2178[fixed] Cannot create person with non-Administrator role.
-  
-* #2173[fixed] Condition operator text cut off in workflow automation.
+* Marketing feature for creating events and campaign.
 
 ## **v2.0.6 (20th of March 2025)** - *Release*
 
