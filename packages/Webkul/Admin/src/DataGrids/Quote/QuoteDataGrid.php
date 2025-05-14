@@ -90,7 +90,7 @@ class QuoteDataGrid extends DataGrid
             'type'       => 'date',
             'searchable' => false,
             'filterable' => true,
-            'closure'    => fn($row) => core()->formatDate($row->expired_quotes, 'Y-m-d'),
+            'closure'    => fn ($row) => core()->formatDate($row->expired_quotes, 'Y-m-d'),
         ]);
 
         $this->addColumn([
