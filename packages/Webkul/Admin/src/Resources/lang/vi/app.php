@@ -628,6 +628,11 @@ return [
                         ],
                     ],
                 ],
+
+                'tags' => [
+                    'create-success'  => 'Thẻ được tạo thành công.',
+                    'destroy-success' => 'Thẻ đã được xóa thành công.',
+                ],
             ],
 
             'create' => [
