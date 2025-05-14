@@ -44,6 +44,8 @@ return [
         'data-transfer'   => 'Transferencia de Datos',
         'imports'         => 'Importaciones',
         'import'          => 'Importar',
+        'event'           => 'Evento',
+        'campaigns'       => 'Campañas',
     ],
 
     'users' => [
@@ -418,6 +420,12 @@ return [
             'error'   => 'Error',
             'warning' => 'Advertencia',
             'info'    => 'Información',
+        ],
+
+        'tiny-mce' => [
+            'http-error'    => 'Error HTTP',
+            'invalid-json'  => 'Respuesta JSON no válida del servidor.',
+            'upload-failed' => 'Error al subir el archivo. Por favor, inténtelo de nuevo.',
         ],
     ],
 
@@ -1960,7 +1968,6 @@ return [
                 'file'          => 'Carga de archivo',
                 'file-info'     => 'Solo se aceptan archivos en formato pdf, bmp, jpg, jpeg, png.',
                 'file-required' => 'Por favor, selecciona al menos un archivo válido para continuar.',
-                'sample-pdf'    => 'PDF de Muestra',
                 'save-btn'      => 'Guardar',
                 'upload-file'   => 'Subir archivo',
             ],
@@ -2021,7 +2028,7 @@ return [
                 'title' => 'Sobre el Lead',
             ],
 
-            'quotes'=> [
+            'quotes' => [
                 'subject'         => 'Asunto',
                 'expired-at'      => 'Expirado En',
                 'sub-total'       => 'Subtotal',
@@ -2177,8 +2184,8 @@ return [
                     'info'                => 'Mejora tu experiencia con Magic AI con tu clave API de OpenRouter. ¡Intégrala ahora para una aventura de IA personalizada y sin problemas, hecha a tu medida! Personaliza la configuración sin esfuerzo y toma el control de tu viaje de IA.',
                     'other'               => 'Otro Modelo',
                     'other-model'         => 'Para otros modelos, usa el ID del Modelo de OpenRouter.',
-                    'pdf-generation'      => 'Generación de PDF',
-                    'pdf-generation-info' => 'Habilita la función de Generación de PDF para extraer automáticamente datos de archivos PDF y convertirlos en formato de texto. Mejora tu productividad y eficiencia habilitando esta función para optimizar tu flujo de trabajo.',
+                    'doc-generation'      => 'Generación de DOC',
+                    'doc-generation-info' => 'Habilita la función de generación de DOC para extraer automáticamente datos de archivos DOC y convertirlos a formato de texto. Mejora tu productividad y eficiencia habilitando esta función para agilizar tu flujo de trabajo.',
                     'title'               => 'Configuraciones Generales',
 
                     'models'     => [
