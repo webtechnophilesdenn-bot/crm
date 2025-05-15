@@ -1,4 +1,8 @@
-## **v2.1.1 (14 of May 2025)** - *Release*
+## **v2.1.1 (15 of May 2025)** - *Release*
+
+* Fixed broken password change functionality
+
+* Implemented missing SVG sanitization to enhance security
 
 * Added contact visibility control for individual accounts across different groups.
 
