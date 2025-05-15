@@ -443,7 +443,6 @@ return [
                 'sales-person'   => 'Vendedor',
                 'expired-at'     => 'Vence en',
                 'created-at'     => 'Creado en',
-                'expired-quotes' => 'Cotización Expirada',
                 'person'         => 'Persona',
                 'subtotal'       => 'Subtotal',
                 'discount'       => 'Descuento',

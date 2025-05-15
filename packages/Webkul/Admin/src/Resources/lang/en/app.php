@@ -441,7 +441,6 @@ return [
                 'sales-person'   => 'Sales Person',
                 'expired-at'     => 'Expired At',
                 'created-at'     => 'Created At',
-                'expired-quotes' => 'Expired Quote',
                 'person'         => 'Person',
                 'subtotal'       => 'Subtotal',
                 'discount'       => 'Discount',

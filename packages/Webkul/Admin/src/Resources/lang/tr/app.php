@@ -443,7 +443,6 @@ return [
                 'sales-person'   => 'Satış Temsilcisi',
                 'expired-at'     => 'Son Kullanma Tarihi',
                 'created-at'     => 'Oluşturulma Tarihi',
-                'expired-quotes' => 'Süresi Dolmuş Teklifler',
                 'person'         => 'Kişi',
                 'subtotal'       => 'Ara Toplam',
                 'discount'       => 'İndirim',

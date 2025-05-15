@@ -443,7 +443,6 @@ return [
                 'sales-person'   => 'فروشنده',
                 'expired-at'     => 'تاریخ انقضا',
                 'created-at'     => 'تاریخ ایجاد',
-                'expired-quotes' => 'نقل‌قول‌های منقضی‌شده',
                 'person'         => 'شخص',
                 'subtotal'       => 'جمع جزء',
                 'discount'       => 'تخفیف',

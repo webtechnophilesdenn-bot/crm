@@ -85,15 +85,6 @@ class QuoteDataGrid extends DataGrid
         ]);
 
         $this->addColumn([
-            'index'      => 'expired_quotes',
-            'label'      => trans('admin::app.quotes.index.datagrid.expired-quotes'),
-            'type'       => 'date',
-            'searchable' => false,
-            'filterable' => true,
-            'closure'    => fn($row) => core()->formatDate($row->expired_quotes, 'Y-m-d'),
-        ]);
-
-        $this->addColumn([
             'index'              => 'person_name',
             'label'              => trans('admin::app.quotes.index.datagrid.person'),
             'type'               => 'string',

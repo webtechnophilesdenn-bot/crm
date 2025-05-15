@@ -440,7 +440,6 @@ return [
                 'sales-person'   => 'Nhân viên bán hàng',
                 'expired-at'     => 'Hết hạn vào',
                 'created-at'     => 'Tạo vào',
-                'expired-quotes' => 'Báo giá hết hạn',
                 'person'         => 'Người',
                 'subtotal'       => 'Tổng phụ',
                 'discount'       => 'Giảm giá',
