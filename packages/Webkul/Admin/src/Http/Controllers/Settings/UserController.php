@@ -110,7 +110,7 @@ class UserController extends Controller
     public function update(int $id): JsonResponse
     {
         $this->validate(request(), [
-            'email'            => 'required|email|unique:users,email,' . $id,
+            'email'            => 'required|email|unique:users,email,'.$id,
             'name'             => 'required|string',
             'password'         => 'nullable|string|min:6',
             'confirm_password' => 'nullable|required_with:password|same:password',
@@ -146,7 +146,6 @@ class UserController extends Controller
             'message' => trans('admin::app.settings.users.index.update-success'),
         ]);
     }
-
 
     /**
      * Search user results.
