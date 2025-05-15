@@ -6,6 +6,8 @@
     $selectedOption = old($attribute->code) ?: $value;
 @endphp
 
+<input type="hidden" name="{{ $attribute->code }}" />
+
 @foreach ($options as $option)
     <x-admin::form.control-group class="!mb-2 flex items-center gap-2.5">
         <x-admin::form.control-group.control
@@ -13,7 +15,7 @@
             :id="$option->id"
             name="{{ $attribute->code }}[]"
             :value="$option->id"
-            :for="$option->id" 
+            :for="$option->id"
             :label="$option->name"
             :checked="in_array($option->id, explode(',', $selectedOption))"
         />
