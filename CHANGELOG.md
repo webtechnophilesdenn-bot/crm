@@ -1,3 +1,31 @@
+## **v2.1.1 (15 of May 2025)** - *Release*
+
+* Fixed broken password change functionality
+
+* Implemented missing SVG sanitization to enhance security
+
+* Added contact visibility control for individual accounts across different groups.
+
+* Introduced dashboard pie chart features for better data visualization.
+
+* #2195.[fixed]. Resolved migration failure on new setup.
+  
+* #2189.[fixed]. Addressed missing installation instructions in Readme.md.
+  
+* #2185.[fixed]. Corrected display of internal ACL labels on Role Edit/Create page.
+  
+* #2184.[fixed]. Eliminated error 500 when creating lead or contact.
+  
+* #2183.[fixed]. Repaired issue with email view rendering.
+  
+* #2181.[fixed]. Handled installation error in `krayin/rest-api`.
+  
+* #2180.[fixed]. Fixed database migration failure during installation.
+  
+* #2178.[fixed]. Enabled person creation for roles other than Administrator.
+  
+* #2173.[fixed]. Improved condition operator input visibility in workflow automation.
+
 ## **v2.1.0 (26th of March 2025)** - *Release*
 
 * Mobile responsive pages.
