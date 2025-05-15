@@ -686,6 +686,7 @@ return [
                 'edit'      => 'Chỉnh sửa',
                 'id'        => 'ID',
                 'in-stock'  => 'Có sẵn',
+                'tag-name'  => 'Tên thẻ',
                 'name'      => 'Tên',
                 'on-hand'   => 'Sẵn có',
                 'price'     => 'Giá',

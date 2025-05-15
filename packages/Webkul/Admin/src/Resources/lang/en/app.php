@@ -689,6 +689,7 @@ return [
                 'in-stock'  => 'In Stock',
                 'name'      => 'Name',
                 'on-hand'   => 'On Hand',
+                'tag-name'  => 'Tag Name',
                 'price'     => 'Price',
                 'sku'       => 'SKU',
                 'view'      => 'View',
