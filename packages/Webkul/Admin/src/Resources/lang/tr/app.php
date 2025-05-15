@@ -1803,6 +1803,7 @@ return [
                 'content'       => 'Eklentiler',
                 'date'          => 'Tarih',
                 'move-to-inbox' => 'Gelen Kutusuna Taşı',
+                'move-to-trash' => 'Çöp kutusuna taşındı',
                 'edit'          => 'Düzenle',
                 'view'          => 'Görüntüle',
                 'delete'        => 'Sil',

@@ -1697,6 +1697,7 @@ return [
                 'attachments'   => 'Tệp đính kèm',
                 'date'          => 'Ngày',
                 'move-to-inbox' => 'Di chuyển vào hộp thư đến',
+                'move-to-trash' => 'Đã chuyển vào thùng rác',
                 'edit'          => 'Chỉnh sửa',
                 'view'          => 'Xem',
                 'delete'        => 'Xóa',

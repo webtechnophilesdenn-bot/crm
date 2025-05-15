@@ -1802,6 +1802,7 @@ return [
                 'attachments'   => 'Archivos adjuntos',
                 'date'          => 'Fecha',
                 'move-to-inbox' => 'Mover a la bandeja de entrada',
+                'move-to-trash' => 'Movido a la papelera',
                 'edit'          => 'Editar',
                 'view'          => 'Ver',
                 'delete'        => 'Eliminar',
