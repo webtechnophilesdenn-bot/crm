@@ -627,6 +627,11 @@ return [
                         ],
                     ],
                 ],
+
+                'tags' => [
+                    'create-success'  => 'تم إنشاء الوسم بنجاح.',
+                    'destroy-success' => 'تم حذف الوسم بنجاح.',
+                ],
             ],
 
             'create' => [

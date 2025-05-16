@@ -625,6 +625,11 @@ return [
                         ],
                     ],
                 ],
+
+                'tags' => [
+                    'create-success'  => 'Tag criada com sucesso.',
+                    'destroy-success' => 'Tag excluída com sucesso.',
+                ],
             ],
 
             'create' => [
