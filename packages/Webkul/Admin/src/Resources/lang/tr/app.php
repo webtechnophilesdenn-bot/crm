@@ -631,6 +631,11 @@ return [
                         ],
                     ],
                 ],
+
+                'tags' => [
+                    'create-success'  => 'Etiket başarıyla oluşturuldu.',
+                    'destroy-success' => 'Etiket başarıyla silindi.',
+                ],
             ],
 
             'create' => [

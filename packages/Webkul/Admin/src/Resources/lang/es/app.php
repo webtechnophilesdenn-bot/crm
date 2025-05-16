@@ -631,6 +631,11 @@ return [
                         ],
                     ],
                 ],
+
+                'tags' => [
+                    'create-success'  => 'Etiqueta creada con éxito.',
+                    'destroy-success' => 'Etiqueta eliminada con éxito.',
+                ],
             ],
 
             'create' => [

@@ -631,6 +631,11 @@ return [
                         ],
                     ],
                 ],
+
+                'tags' => [
+                    'create-success'  => 'برچسب با موفقیت ایجاد شد.',
+                    'destroy-success' => 'برچسب با موفقیت حذف شد.',
+                ],
             ],
 
             'create' => [
