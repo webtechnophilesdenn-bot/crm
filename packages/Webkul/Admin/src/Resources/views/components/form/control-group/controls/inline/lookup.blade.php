@@ -235,8 +235,6 @@
                     dropdownPosition: "bottom",
 
                     isRTL: document.documentElement.dir === 'rtl',
-
-                    uniqueId: Math.floor(100000 + Math.random() * 900000),
                 };
             },
 
@@ -258,15 +256,7 @@
             mounted() {
                 window.addEventListener("resize", this.setDropdownPosition);
 
-                this.$emitter.on('lookup-dropdown-opened', (data) => {
-                    if (data.componentId !== this.uniqueId) {
-                        this.showPopup = false;
-                    }
-                });
-            },
-
-            beforeUnmount() {
-                this.$emitter.off('lookup-dropdown-opened');
+                this.$emitter.on('show-pop', this.handleShowPop);
             },
 
             computed: {
@@ -307,12 +297,16 @@
                 },
 
                 toggleEditor() {
-                    this.$emitter.emit('lookup-dropdown-opened', { componentId: this.uniqueId });
+                    this.$emitter.emit('show-pop', this.$.uid);
+                },
 
-                    this.showPopup = ! this.showPopup;
+                handleShowPop(uid) {
+                    this.showPopup = (uid === this.$.uid);
 
                     if (this.showPopup) {
-                        this.$nextTick(() => this.$refs.searchInput.focus());
+                        this.$nextTick(() => this.$refs.searchInput?.focus());
+                    } else {
+                        this.isEditing = false;
                     }
                 },
 
