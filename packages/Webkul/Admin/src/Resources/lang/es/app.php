@@ -694,6 +694,7 @@ return [
                 'edit'      => 'Editar',
                 'id'        => 'ID',
                 'in-stock'  => 'En Stock',
+                'tag-name'  => 'Nombre de etiqueta',
                 'name'      => 'Nombre',
                 'on-hand'   => 'Disponible',
                 'price'     => 'Precio',

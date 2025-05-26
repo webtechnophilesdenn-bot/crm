@@ -688,6 +688,7 @@ return [
                 'edit'      => 'Editar',
                 'id'        => 'ID',
                 'in-stock'  => 'Em Estoque',
+                'tag-name'  => 'Nome da Tag',
                 'name'      => 'Nome',
                 'on-hand'   => 'Disponível',
                 'price'     => 'Preço',

@@ -694,6 +694,7 @@ return [
                 'edit'      => 'Düzenle',
                 'id'        => 'ID',
                 'in-stock'  => 'Stokta',
+                'tag-name'  => 'Etiket Adı',
                 'name'      => 'Ad',
                 'on-hand'   => 'Elinde',
                 'price'     => 'Fiyat',
