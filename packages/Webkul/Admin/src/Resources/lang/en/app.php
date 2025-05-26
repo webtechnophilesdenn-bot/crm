@@ -1806,6 +1806,7 @@ return [
                 'attachments'   => 'Attachments',
                 'date'          => 'Date',
                 'move-to-inbox' => 'Moved To Inbox',
+                'move-to-trash' => 'Moved To Trash',
                 'edit'          => 'Edit',
                 'view'          => 'View',
                 'delete'        => 'Delete',

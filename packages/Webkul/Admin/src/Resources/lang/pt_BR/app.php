@@ -1694,6 +1694,7 @@ return [
                 'tag-name'      => 'Nome da Tag',
                 'created-at'    => 'Criado Em',
                 'move-to-inbox' => 'Movido para Caixa de Entrada',
+                'move-to-trash' => 'Movido para a lixeira',
                 'edit'          => 'Editar',
                 'view'          => 'Visualizar',
                 'delete'        => 'Excluir',
