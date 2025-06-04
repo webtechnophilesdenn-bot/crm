@@ -439,7 +439,6 @@ return [
                 'sales-person'   => 'مندوب المبيعات',
                 'expired-at'     => 'تاريخ الانتهاء',
                 'created-at'     => 'تاريخ الإنشاء',
-                'expired-quotes' => 'عرض السعر المنتهي',
                 'person'         => 'الشخص',
                 'subtotal'       => 'المجموع الفرعي',
                 'discount'       => 'الخصم',
