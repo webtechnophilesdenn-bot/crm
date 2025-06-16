@@ -1,3 +1,15 @@
+## **v2.1.2 (16 of May 2025)** - *Release*
+
+* #2172[fixed] Cleaned up unnecessary label-value JSON from Email and Contact columns in export.
+
+* #2171[fixed] Corrected the success message when adding a tag to a person in Contacts module.
+
+* #2167[fixed] Aligned "Schedule From" and date inputs in the Workflow action UI. 
+
+* #2155[fixed] Resolved validation for required custom attributes when creating a Person. 
+
+* #1992[fixed] Removed duplicate "Stage" options when selecting "Lead" in workflow conditions.
+
 ## **v2.1.1 (15 of May 2025)** - *Release*
 
 * Fixed broken password change functionality
