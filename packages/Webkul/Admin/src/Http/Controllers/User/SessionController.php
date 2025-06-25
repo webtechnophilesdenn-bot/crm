@@ -2,9 +2,9 @@
 
 namespace Webkul\Admin\Http\Controllers\User;
 
-use Illuminate\View\View;
-use Illuminate\Support\Collection;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Collection;
+use Illuminate\View\View;
 use Webkul\Admin\Http\Controllers\Controller;
 
 class SessionController extends Controller
