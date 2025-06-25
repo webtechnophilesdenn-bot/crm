@@ -6,6 +6,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Collection;
 use Illuminate\View\View;
 use Webkul\Admin\Http\Controllers\Controller;
+use Webkul\Core\Menu\MenuItem;
 
 class SessionController extends Controller
 {
@@ -96,8 +97,12 @@ class SessionController extends Controller
     /**
      * Find menu item by URL.
      */
-    protected function findIntendedRoute(Collection $menus, string $url): ?object
+    protected function findIntendedRoute(Collection $menus, ?string $url): ?MenuItem
     {
+        if (is_null($url)) {
+            return null;
+        }
+
         foreach ($menus as $menu) {
             if ($menu->getUrl() === $url) {
                 return $menu;
