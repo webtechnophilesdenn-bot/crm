@@ -157,20 +157,24 @@ class LeadController extends Controller
     {
         Event::dispatch('lead.create.before');
 
-        $data = $request->all();
+        $data = request()->all();
 
         $data['status'] = 1;
 
-        if (isset($data['lead_pipeline_stage_id'])) {
+        if (! empty($data['lead_pipeline_stage_id'])) {
             $stage = $this->stageRepository->findOrFail($data['lead_pipeline_stage_id']);
 
             $data['lead_pipeline_id'] = $stage->lead_pipeline_id;
         } else {
-            $pipeline = $this->pipelineRepository->getDefaultPipeline();
+            if (empty($data['lead_pipeline_id'])) {
+                $pipeline = $this->pipelineRepository->getDefaultPipeline();
+
+                $data['lead_pipeline_id'] = $pipeline->id;
+            } else {
+                $pipeline = $this->pipelineRepository->findOrFail($data['lead_pipeline_id']);
+            }
 
             $stage = $pipeline->stages()->first();
-
-            $data['lead_pipeline_id'] = $pipeline->id;
 
             $data['lead_pipeline_stage_id'] = $stage->id;
         }
@@ -185,7 +189,11 @@ class LeadController extends Controller
 
         session()->flash('success', trans('admin::app.leads.create-success'));
 
-        return redirect()->route('admin.leads.index', $data['lead_pipeline_id']);
+        if (! empty($data['lead_pipeline_id'])) {
+            $params['pipeline_id'] = $data['lead_pipeline_id'];
+        }
+
+        return redirect()->route('admin.leads.index', $params ?? []);
     }
 
     /**
