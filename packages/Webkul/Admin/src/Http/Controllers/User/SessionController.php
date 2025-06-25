@@ -2,38 +2,37 @@
 
 namespace Webkul\Admin\Http\Controllers\User;
 
+use Illuminate\View\View;
+use Illuminate\Support\Collection;
+use Illuminate\Http\RedirectResponse;
 use Webkul\Admin\Http\Controllers\Controller;
 
 class SessionController extends Controller
 {
     /**
      * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\View\View
      */
-    public function create()
+    public function create(): RedirectResponse|View
     {
         if (auth()->guard('user')->check()) {
             return redirect()->route('admin.dashboard.index');
-        } else {
-            if (strpos(url()->previous(), 'admin') !== false) {
-                $intendedUrl = url()->previous();
-            } else {
-                $intendedUrl = route('admin.dashboard.index');
-            }
-
-            session()->put('url.intended', $intendedUrl);
-
-            return view('admin::sessions.login');
         }
+
+        $previousUrl = url()->previous();
+
+        $intendedUrl = str_contains($previousUrl, 'admin')
+            ? $previousUrl
+            : route('admin.dashboard.index');
+
+        session()->put('url.intended', $intendedUrl);
+
+        return view('admin::sessions.login');
     }
 
     /**
      * Store a newly created resource in storage.
-     *
-     * @return \Illuminate\Http\Response
      */
-    public function store()
+    public function store(): RedirectResponse
     {
         $this->validate(request(), [
             'email'    => 'required|email',
@@ -54,9 +53,11 @@ class SessionController extends Controller
             return redirect()->route('admin.session.create');
         }
 
-        if (! bouncer()->hasPermission('dashboard')) {
-            $availableNextMenu = menu()->getItems('admin')?->first();
+        $menus = menu()->getItems('admin');
 
+        $availableNextMenu = $menus?->first();
+
+        if (! bouncer()->hasPermission('dashboard')) {
             if (is_null($availableNextMenu)) {
                 session()->flash('error', trans('admin::app.users.not-permission'));
 
@@ -68,18 +69,49 @@ class SessionController extends Controller
             return redirect()->to($availableNextMenu->getUrl());
         }
 
+        $intendedUrl = redirect()->getIntendedUrl();
+
+        $routeName = $this->findIntendedRoute($menus, $intendedUrl);
+
+        if (
+            $routeName
+            && ! bouncer()->hasPermission($routeName->getKey())
+        ) {
+            return redirect()->to($availableNextMenu->getUrl());
+        }
+
         return redirect()->intended(route('admin.dashboard.index'));
     }
 
     /**
      * Remove the specified resource from storage.
-     *
-     * @return \Illuminate\Http\Response
      */
-    public function destroy()
+    public function destroy(): RedirectResponse
     {
         auth()->guard('user')->logout();
 
         return redirect()->route('admin.session.create');
+    }
+
+    /**
+     * Find menu item by URL.
+     */
+    protected function findIntendedRoute(Collection $menus, string $url): ?object
+    {
+        foreach ($menus as $menu) {
+            if ($menu->getUrl() === $url) {
+                return $menu;
+            }
+
+            if ($menu->haveChildren()) {
+                $found = $this->findIntendedRoute($menu->getChildren(), $url);
+
+                if ($found) {
+                    return $found;
+                }
+            }
+        }
+
+        return null;
     }
 }
