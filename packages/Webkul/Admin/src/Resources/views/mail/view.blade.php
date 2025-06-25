@@ -766,7 +766,7 @@
                                 <!-- Tags -->
                                 <template v-for="tag in email.lead.tags">
                                     <div
-                                        class="rounded-xl bg-slate-200 px-3 py-1 text-xs font-medium"
+                                        class="rounded-xl bg-slate-200 px-3 py-1 text-xs font-medium dark:bg-gray-900"
                                         :style="{
                                             backgroundColor: tag.color,
                                             color: tagTextColor[tag.color]
@@ -777,17 +777,17 @@
                                 </template>
 
                                 <!-- Lead Value -->
-                                <div class="rounded-xl bg-slate-200 px-3 py-1 text-xs font-medium">
+                                <div class="rounded-xl bg-slate-200 px-3 py-1 text-xs font-medium dark:bg-gray-900">
                                     @{{ $admin.formatPrice(email.lead.lead_value) }}
                                 </div>
 
                                 <!-- Source Name -->
-                                <div class="rounded-xl bg-slate-200 px-3 py-1 text-xs font-medium">
+                                <div class="rounded-xl bg-slate-200 px-3 py-1 text-xs font-medium dark:bg-gray-900">
                                     @{{ email.lead.source?.name }}
                                 </div>
 
                                 <!-- Lead Type Name -->
-                                <div class="rounded-xl bg-slate-200 px-3 py-1 text-xs font-medium">
+                                <div class="rounded-xl bg-slate-200 px-3 py-1 text-xs font-medium dark:bg-gray-900">
                                     @{{ email.lead.type?.name }}
                                 </div>
                             </div>
