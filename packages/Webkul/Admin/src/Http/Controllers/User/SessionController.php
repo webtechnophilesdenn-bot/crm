@@ -70,18 +70,13 @@ class SessionController extends Controller
             return redirect()->to($availableNextMenu->getUrl());
         }
 
-        $intendedUrl = redirect()->getIntendedUrl();
+        $hasAccessToIntendedUrl = $this->canAccessIntendedUrl($menus, redirect()->getIntendedUrl());
 
-        $routeName = $this->findIntendedRoute($menus, $intendedUrl);
-
-        if (
-            $routeName
-            && ! bouncer()->hasPermission($routeName->getKey())
-        ) {
-            return redirect()->to($availableNextMenu->getUrl());
+        if ($hasAccessToIntendedUrl) {
+            return redirect()->intended(route('admin.dashboard.index'));
         }
 
-        return redirect()->intended(route('admin.dashboard.index'));
+        return redirect()->to($availableNextMenu->getUrl());
     }
 
     /**
@@ -97,7 +92,7 @@ class SessionController extends Controller
     /**
      * Find menu item by URL.
      */
-    protected function findIntendedRoute(Collection $menus, ?string $url): ?MenuItem
+    protected function canAccessIntendedUrl(Collection $menus, ?string $url): ?MenuItem
     {
         if (is_null($url)) {
             return null;
@@ -109,7 +104,7 @@ class SessionController extends Controller
             }
 
             if ($menu->haveChildren()) {
-                $found = $this->findIntendedRoute($menu->getChildren(), $url);
+                $found = $this->canAccessIntendedUrl($menu->getChildren(), $url);
 
                 if ($found) {
                     return $found;
