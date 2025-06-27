@@ -541,12 +541,13 @@ return [
     'contacts' => [
         'persons' => [
             'index' => [
-                'title'          => 'Persons',
-                'create-btn'     => 'Create Person',
-                'create-success' => 'Person created successfully.',
-                'update-success' => 'Person updated successfully.',
-                'delete-success' => 'Person deleted successfully.',
-                'delete-failed'  => 'Person can not be deleted.',
+                'title'                  => 'Persons',
+                'create-btn'             => 'Create Person',
+                'create-success'         => 'Person created successfully.',
+                'update-success'         => 'Person updated successfully.',
+                'delete-success'         => 'Person deleted successfully.',
+                'delete-failed'          => 'Person can not be deleted.',
+                'delete-partial-warning' => 'However, the following could not be deleted because they have leads: :persons.',
 
                 'datagrid' => [
                     'contact-numbers'   => 'Contact Numbers',

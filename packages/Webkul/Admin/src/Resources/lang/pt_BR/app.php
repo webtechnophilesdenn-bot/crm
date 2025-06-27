@@ -537,12 +537,13 @@ return [
     'contacts' => [
         'persons' => [
             'index' => [
-                'title'          => 'Pessoas',
-                'create-btn'     => 'Adicionar Pessoa',
-                'create-success' => 'Pessoa adicionada com sucesso.',
-                'update-success' => 'Pessoa atualizada com sucesso.',
-                'delete-success' => 'Pessoa excluída com sucesso.',
-                'delete-failed'  => 'Não foi possível excluir a pessoa.',
+                'title'                  => 'Pessoas',
+                'create-btn'             => 'Adicionar Pessoa',
+                'create-success'         => 'Pessoa adicionada com sucesso.',
+                'update-success'         => 'Pessoa atualizada com sucesso.',
+                'delete-success'         => 'Pessoa excluída com sucesso.',
+                'delete-failed'          => 'Não foi possível excluir a pessoa.',
+                'delete-partial-warning' => 'No entanto, os seguintes não puderam ser excluídos porque possuem leads: :persons.',
 
                 'datagrid' => [
                     'contact-numbers'   => 'Números de Contato',

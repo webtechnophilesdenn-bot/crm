@@ -544,12 +544,13 @@ return [
     'contacts' => [
         'persons' => [
             'index' => [
-                'title'          => 'اشخاص',
-                'create-btn'     => 'ایجاد شخص',
-                'create-success' => 'شخص با موفقیت ایجاد شد.',
-                'update-success' => 'شخص با موفقیت به‌روزرسانی شد.',
-                'delete-success' => 'شخص با موفقیت حذف شد.',
-                'delete-failed'  => 'حذف شخص ممکن نیست.',
+                'title'                  => 'اشخاص',
+                'create-btn'             => 'ایجاد شخص',
+                'create-success'         => 'شخص با موفقیت ایجاد شد.',
+                'update-success'         => 'شخص با موفقیت به‌روزرسانی شد.',
+                'delete-success'         => 'شخص با موفقیت حذف شد.',
+                'delete-failed'          => 'حذف شخص ممکن نیست.',
+                'delete-partial-warning' => 'با این حال، موارد زیر به دلیل داشتن سرنخ قابل حذف نیستند: :persons.',
 
                 'datagrid' => [
                     'contact-numbers'   => 'شماره‌های تماس',

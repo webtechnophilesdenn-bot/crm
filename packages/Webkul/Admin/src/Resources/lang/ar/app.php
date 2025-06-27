@@ -539,12 +539,13 @@ return [
     'contacts' => [
         'persons' => [
             'index' => [
-                'title'          => 'الأشخاص',
-                'create-btn'     => 'إنشاء شخص',
-                'create-success' => 'تم إنشاء الشخص بنجاح.',
-                'update-success' => 'تم تحديث الشخص بنجاح.',
-                'delete-success' => 'تم حذف الشخص بنجاح.',
-                'delete-failed'  => 'لا يمكن حذف الشخص.',
+                'title'                  => 'الأشخاص',
+                'create-btn'             => 'إنشاء شخص',
+                'create-success'         => 'تم إنشاء الشخص بنجاح.',
+                'update-success'         => 'تم تحديث الشخص بنجاح.',
+                'delete-success'         => 'تم حذف الشخص بنجاح.',
+                'delete-failed'          => 'لا يمكن حذف الشخص.',
+                'delete-partial-warning' => 'ومع ذلك، لا يمكن حذف الأشخاص التاليين لأن لديهم عملاء محتملين: :persons.',
 
                 'datagrid' => [
                     'contact-numbers'   => 'أرقام الاتصال',

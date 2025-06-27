@@ -540,12 +540,13 @@ return [
     'contacts' => [
         'persons' => [
             'index' => [
-                'title'          => 'Người',
-                'create-btn'     => 'Tạo Người',
-                'create-success' => 'Người đã được tạo thành công.',
-                'update-success' => 'Người đã được cập nhật thành công.',
-                'delete-success' => 'Người đã được xóa thành công.',
-                'delete-failed'  => 'Không thể xóa người này.',
+                'title'                  => 'Người',
+                'create-btn'             => 'Tạo Người',
+                'create-success'         => 'Người đã được tạo thành công.',
+                'update-success'         => 'Người đã được cập nhật thành công.',
+                'delete-success'         => 'Người đã được xóa thành công.',
+                'delete-failed'          => 'Không thể xóa người này.',
+                'delete-partial-warning' => 'Tuy nhiên, các mục sau không thể bị xóa vì có các cơ hội tiềm năng: :persons.',
 
                 'datagrid' => [
                     'contact-numbers'   => 'Số Liên hệ',
