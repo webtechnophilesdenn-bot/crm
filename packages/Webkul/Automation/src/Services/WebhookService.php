@@ -37,7 +37,7 @@ class WebhookService
             || ! isset($data['end_point'])
         ) {
             return [
-                'status' => 'error',
+                'status'   => 'error',
                 'response' => 'Missing required fields: method or end_point',
             ];
         }
@@ -397,8 +397,7 @@ class WebhookService
         }
 
         if (array_is_list($array)) {
-            return collect($array)->every(fn ($item) =>
-                is_array($item) && isset($item['key']) && array_key_exists('value', $item)
+            return collect($array)->every(fn ($item) => is_array($item) && isset($item['key']) && array_key_exists('value', $item)
             );
         }
 
@@ -434,6 +433,6 @@ class WebhookService
 
         $glue = str_contains($endPoint, '?') ? '&' : '?';
 
-        return $endPoint . ($queryString ? $glue . $queryString : '');
+        return $endPoint.($queryString ? $glue.$queryString : '');
     }
 }
