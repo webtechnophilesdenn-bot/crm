@@ -36,7 +36,7 @@ class PipelineForm extends FormRequest
     {
         if (request('id')) {
             return [
-                'name'          => 'required|unique:lead_pipelines,name,' . request('id'),
+                'name'          => 'required|unique:lead_pipelines,name,'.request('id'),
                 'stages.*.name' => 'unique_key',
                 'stages.*.code' => 'unique_key',
             ];
