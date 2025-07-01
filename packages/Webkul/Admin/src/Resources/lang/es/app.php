@@ -1949,7 +1949,7 @@ return [
 
                 'toolbar' => [
                     'search' => [
-                        'title' => 'Buscar',
+                        'title' => 'Buscar por título',
                     ],
 
                     'filters' => [

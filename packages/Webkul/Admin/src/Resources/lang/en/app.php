@@ -1948,7 +1948,7 @@ return [
 
                 'toolbar' => [
                     'search' => [
-                        'title' => 'Search',
+                        'title' => 'Search by Title',
                     ],
 
                     'filters' => [

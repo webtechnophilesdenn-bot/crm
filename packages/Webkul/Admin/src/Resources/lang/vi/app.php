@@ -1843,7 +1843,7 @@ return [
 
                 'toolbar' => [
                     'search' => [
-                        'title' => 'Tìm Kiếm',
+                        'title' => 'Tìm kiếm theo tiêu đề',
                     ],
 
                     'filters' => [

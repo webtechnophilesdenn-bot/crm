@@ -1946,7 +1946,7 @@ return [
 
                 'toolbar' => [
                     'search' => [
-                        'title' => 'بحث',
+                        'title' => 'البحث حسب العنوان',
                     ],
 
                     'filters' => [
