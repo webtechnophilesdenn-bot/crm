@@ -1950,7 +1950,7 @@ return [
 
                 'toolbar' => [
                     'search' => [
-                        'title' => 'Ara',
+                        'title' => 'Başlığa göre ara',
                     ],
 
                     'filters' => [
