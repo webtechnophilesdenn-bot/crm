@@ -1271,6 +1271,7 @@ return [
                 'create-btn'           => 'Create Pipeline',
                 'create-success'       => 'Pipeline created successfully.',
                 'update-success'       => 'Pipeline updated successfully.',
+                'default-required'     => 'At least one default pipeline is required.',
                 'delete-success'       => 'Pipeline deleted successfully.',
                 'delete-failed'        => 'Pipeline can not be deleted.',
                 'default-delete-error' => 'Default pipeline can not be deleted.',

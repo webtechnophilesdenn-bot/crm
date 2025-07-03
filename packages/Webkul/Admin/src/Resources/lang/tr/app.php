@@ -1272,6 +1272,7 @@ return [
                 'title'                => 'Pipelines',
                 'create-btn'           => 'Pipeline Oluştur',
                 'create-success'       => 'Pipeline başarıyla oluşturuldu.',
+                'default-required'     => 'En az bir varsayılan boru hattı gereklidir.',
                 'update-success'       => 'Pipeline başarıyla güncellendi.',
                 'delete-success'       => 'Pipeline başarıyla silindi.',
                 'delete-failed'        => 'Pipeline silinemedi.',

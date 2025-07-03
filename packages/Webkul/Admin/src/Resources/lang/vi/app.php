@@ -1268,6 +1268,7 @@ return [
                 'title'                => 'Quy Trình',
                 'create-btn'           => 'Tạo Quy Trình',
                 'create-success'       => 'Quy trình đã được tạo thành công.',
+                'default-required'     => 'Cần ít nhất một pipeline mặc định.',
                 'update-success'       => 'Quy trình đã được cập nhật thành công.',
                 'delete-success'       => 'Quy trình đã được xóa thành công.',
                 'delete-failed'        => 'Quy trình không thể bị xóa.',

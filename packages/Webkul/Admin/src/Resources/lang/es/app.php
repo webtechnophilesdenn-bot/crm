@@ -1271,6 +1271,7 @@ return [
                 'title'                => 'Canales',
                 'create-btn'           => 'Crear Canal',
                 'create-success'       => 'Canal creado exitosamente.',
+                'default-required'     => 'Se requiere al menos una canalización predeterminada.',
                 'update-success'       => 'Canal actualizado exitosamente.',
                 'delete-success'       => 'Canal eliminado exitosamente.',
                 'delete-failed'        => 'No se puede eliminar el Canal.',
