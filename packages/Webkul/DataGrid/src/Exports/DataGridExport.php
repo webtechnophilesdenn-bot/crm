@@ -47,7 +47,10 @@ class DataGridExport implements FromQuery, ShouldAutoSize, WithHeadings, WithMap
                 $index = $column->getIndex();
                 $value = $record->{$index};
 
-                if (in_array($index, ['emails', 'contact_numbers']) && is_string($value)) {
+                if (
+                    in_array($index, ['emails', 'contact_numbers'])
+                    && is_string($value)
+                ) {
                     return $this->extractValuesFromJson($value);
                 }
 
@@ -61,11 +64,13 @@ class DataGridExport implements FromQuery, ShouldAutoSize, WithHeadings, WithMap
      */
     protected function extractValuesFromJson(string $json): string
     {
-        $decoded = json_decode($json, true);
+        $items = json_decode($json, true);
 
-        if (json_last_error() === JSON_ERROR_NONE
-            && is_array($decoded)) {
-            return collect($decoded)->pluck('value')->implode(', ');
+        if (
+            json_last_error() === JSON_ERROR_NONE
+            && is_array($items)
+        ) {
+            return collect($items)->map(fn ($item) => "{$item['value']} ({$item['label']})")->implode(', ');
         }
 
         return $json;

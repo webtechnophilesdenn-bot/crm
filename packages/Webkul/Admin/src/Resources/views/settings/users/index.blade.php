@@ -218,7 +218,10 @@
                 >
                     {!! view_render_event('admin.settings.users.index.form_controls.before') !!}
 
-                    <x-admin::modal ref="userUpdateAndCreateModal">
+                    <x-admin::modal
+                        ref="userUpdateAndCreateModal"
+                        @toggle="handleToggle"
+                    >
                         <!-- Modal Header -->
                         <x-slot:header>
                             <p class="text-lg font-bold text-gray-800 dark:text-white">
@@ -513,7 +516,25 @@
                     },
                 },
 
+                mounted() {
+                    @if(request('action') === 'create')
+                        this.openModal();
+                    @endif
+                },
+
                 methods: {
+                    handleToggle(state) {
+                        if (state.isActive) {
+                            return;
+                        }
+
+                        const url = new URL(window.location.href);
+
+                        url.searchParams.delete('action');
+
+                        window.history.replaceState({}, '', url);
+                    },
+
                     openModal() {
                         this.user = {
                             groups: [],

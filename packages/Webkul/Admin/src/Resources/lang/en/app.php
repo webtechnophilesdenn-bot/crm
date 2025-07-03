@@ -185,42 +185,42 @@ return [
                 'empty-placeholders' => [
                     'all' => [
                         'title'       => 'No Activities Found',
-                        'description' => 'No activities found for this. You can add activities by clicking on the button on the left panel.',
+                        'description' => 'No activities found for this. You can add activities by clicking on the Activity button on the left panel.',
                     ],
 
                     'planned' => [
                         'title'       => 'No Planned Activities Found',
-                        'description' => 'No planned activities found for this. You can add planned activities by clicking on the button on the left panel.',
+                        'description' => 'No planned activities found for this. You can add planned activities by clicking on the Activity button on the left panel.',
                     ],
 
                     'notes' => [
                         'title'       => 'No Notes Found',
-                        'description' => 'No notes found for this. You can add notes by clicking on the button on the left panel.',
+                        'description' => 'No notes found for this. You can add notes by clicking on the Note button on the left panel.',
                     ],
 
                     'calls' => [
                         'title'       => 'No Calls Found',
-                        'description' => 'No notes found for this. You can add notes by clicking on the button on the left panel.',
+                        'description' => 'No calls found for this. You can add calls by clicking on the Activity button on the left panel and selecting the Call type.',
                     ],
 
                     'meetings' => [
                         'title'       => 'No Meetings Found',
-                        'description' => 'No meetings found for this. You can add meetings by clicking on the button on the left panel.',
+                        'description' => 'No meetings found for this. You can add meetings by clicking on the Activity button on the left panel and selecting the Meeting type.',
                     ],
 
                     'lunches' => [
                         'title'       => 'No Lunches Found',
-                        'description' => 'No lunches found for this. You can add lunches by clicking on the button on the left panel.',
+                        'description' => 'No lunches found for this. You can add lunches by clicking on the Activity button on the left panel and selecting the Lunch type.',
                     ],
 
                     'files' => [
                         'title'       => 'No Files Found',
-                        'description' => 'No files found for this. You can add files by clicking on the button on the left panel.',
+                        'description' => 'No files found for this. You can add files by clicking on the File button on the left panel.',
                     ],
 
                     'emails' => [
                         'title'       => 'No Emails Found',
-                        'description' => 'No emails found for this. You can add email by clicking on the button on the left panel.',
+                        'description' => 'No emails found for this. You can add emails by clicking on the Mail button on the left panel.',
                     ],
 
                     'system' => [
@@ -441,7 +441,6 @@ return [
                 'sales-person'   => 'Sales Person',
                 'expired-at'     => 'Expired At',
                 'created-at'     => 'Created At',
-                'expired-quotes' => 'Expired Quote',
                 'person'         => 'Person',
                 'subtotal'       => 'Subtotal',
                 'discount'       => 'Discount',
@@ -629,6 +628,11 @@ return [
                         ],
                     ],
                 ],
+
+                'tags' => [
+                    'create-success'  => 'Tag created successfully.',
+                    'destroy-success' => 'Tag deleted successfully.',
+                ],
             ],
 
             'create' => [
@@ -689,6 +693,7 @@ return [
                 'in-stock'  => 'In Stock',
                 'name'      => 'Name',
                 'on-hand'   => 'On Hand',
+                'tag-name'  => 'Tag Name',
                 'price'     => 'Price',
                 'sku'       => 'SKU',
                 'view'      => 'View',
@@ -1802,6 +1807,7 @@ return [
                 'attachments'   => 'Attachments',
                 'date'          => 'Date',
                 'move-to-inbox' => 'Moved To Inbox',
+                'move-to-trash' => 'Moved To Trash',
                 'edit'          => 'Edit',
                 'view'          => 'View',
                 'delete'        => 'Delete',
@@ -1943,7 +1949,7 @@ return [
 
                 'toolbar' => [
                     'search' => [
-                        'title' => 'Search',
+                        'title' => 'Search by Title',
                     ],
 
                     'filters' => [
