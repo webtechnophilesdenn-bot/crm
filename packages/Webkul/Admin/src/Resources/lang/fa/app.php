@@ -1951,7 +1951,7 @@ return [
 
                 'toolbar' => [
                     'search' => [
-                        'title' => 'جستجو',
+                        'title' => 'جستجو بر اساس عنوان',
                     ],
 
                     'filters' => [

@@ -1835,7 +1835,7 @@ return [
 
                 'toolbar' => [
                     'search' => [
-                        'title' => 'Pesquisar',
+                        'title' => 'Buscar por título',
                     ],
 
                     'filters' => [
