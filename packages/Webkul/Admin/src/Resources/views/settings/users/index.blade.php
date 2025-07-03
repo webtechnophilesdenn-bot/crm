@@ -366,6 +366,7 @@
                                         name="view_permission"
                                         rules="required"
                                         v-model="user.view_permission"
+                                        value="global"
                                         :label="trans('admin::app.settings.users.index.create.view-permission')"
                                     >
                                         <!-- Default Option -->
@@ -390,36 +391,39 @@
 
                             {!! view_render_event('admin.settings.users.index.form.role_id.before') !!}
 
-                            <!-- Group -->
-                            <x-admin::form.control-group>
-                                <x-admin::form.control-group.label>
-                                    @lang('admin::app.settings.users.index.create.group')
-                                </x-admin::form.control-group.label>
+                            <template v-if="user.view_permission === 'group'">
+                                <!-- Group -->
+                                <x-admin::form.control-group>
+                                    <x-admin::form.control-group.label class="required">
+                                        @lang('admin::app.settings.users.index.create.group')
+                                    </x-admin::form.control-group.label>
 
-                                <v-field
-                                    name="groups[]"
-                                    label="@lang('admin::app.settings.users.index.create.group')"
-                                    multiple
-                                    v-model="user.groups"
-                                >
-                                    <select
+                                    <v-field
                                         name="groups[]"
-                                        class="flex min-h-[39px] w-full rounded-md border px-3 py-2 text-sm text-gray-600 transition-all hover:border-gray-400 focus:border-gray-400 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-gray-400 dark:focus:border-gray-400"
-                                        :class="[errors['groups[]'] ? 'border !border-red-600 hover:border-red-600' : '']"
+                                        label="@lang('admin::app.settings.users.index.create.group')"
                                         multiple
                                         v-model="user.groups"
+                                        rules="required"
                                     >
-                                        <option
-                                            v-for="group in groups"
-                                            :value="group.id"
-                                            :text="group.name"
+                                        <select
+                                            name="groups[]"
+                                            class="flex min-h-[39px] w-full rounded-md border px-3 py-2 text-sm text-gray-600 transition-all hover:border-gray-400 focus:border-gray-400 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-gray-400 dark:focus:border-gray-400"
+                                            :class="[errors['groups[]'] ? 'border !border-red-600 hover:border-red-600' : '']"
+                                            multiple
+                                            v-model="user.groups"
                                         >
-                                        </option>
-                                    </select>
-                                </v-field>
+                                            <option
+                                                v-for="group in groups"
+                                                :value="group.id"
+                                                :text="group.name"
+                                            >
+                                            </option>
+                                        </select>
+                                    </v-field>
 
-                                <x-admin::form.control-group.error name="groups[]" />
-                            </x-admin::form.control-group>
+                                    <x-admin::form.control-group.error name="groups[]" />
+                                </x-admin::form.control-group>
+                            </template>
 
                             {!! view_render_event('admin.settings.users.index.form.role_id.after') !!}
 
@@ -483,7 +487,9 @@
 
                         groups:  @json($groups),
 
-                        user: {},
+                        user: {
+                            view_permission: 'global',
+                        },
                     };
                 },
 
