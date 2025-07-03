@@ -174,14 +174,14 @@ class PersonController extends Controller
         try {
             $persons = $this->personRepository->findWhereIn('id', $request->input('indices', []));
 
-            $notDeleted = [];
+            $hasBlocked = false;
 
             foreach ($persons as $person) {
                 if (
                     $person->leads
                     && $person->leads->count() > 0
                 ) {
-                    $notDeleted[] = $person->name ?? "ID: {$person->id}";
+                    $hasBlocked = true;
 
                     continue;
                 }
@@ -195,10 +195,8 @@ class PersonController extends Controller
 
             $message = trans('admin::app.contacts.persons.index.delete-success');
 
-            if (! empty($notDeleted)) {
-                $message .= ' '.trans('admin::app.contacts.persons.index.delete-partial-warning', [
-                    'persons' => implode(', ', $notDeleted),
-                ]);
+            if ($hasBlocked) {
+                $message .= ' '.trans('admin::app.contacts.persons.index.some-not-deleted-warning');
             }
 
             return response()->json(['message' => $message]);

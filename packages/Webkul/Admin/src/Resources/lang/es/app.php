@@ -543,13 +543,13 @@ return [
     'contacts' => [
         'persons' => [
             'index' => [
-                'title'                  => 'Personas',
-                'create-btn'             => 'Crear Persona',
-                'create-success'         => 'Persona creada con éxito.',
-                'update-success'         => 'Persona actualizada con éxito.',
-                'delete-success'         => 'Persona eliminada con éxito.',
-                'delete-failed'          => 'No se puede eliminar la persona.',
-                'delete-partial-warning' => 'Sin embargo, no se pudieron eliminar los siguientes porque tienen clientes potenciales: :persons.',
+                'title'                    => 'Personas',
+                'create-btn'               => 'Crear Persona',
+                'create-success'           => 'Persona creada con éxito.',
+                'update-success'           => 'Persona actualizada con éxito.',
+                'delete-success'           => 'Persona eliminada con éxito.',
+                'delete-failed'            => 'No se puede eliminar la persona.',
+                'some-not-deleted-warning' => 'No se pudieron eliminar algunas personas porque están vinculadas a oportunidades.',
 
                 'datagrid' => [
                     'contact-numbers'   => 'Números de Contacto',

@@ -543,13 +543,13 @@ return [
     'contacts' => [
         'persons' => [
             'index' => [
-                'title'                  => 'Kişiler',
-                'create-btn'             => 'Kişi Oluştur',
-                'create-success'         => 'Kişi başarıyla oluşturuldu.',
-                'update-success'         => 'Kişi başarıyla güncellendi.',
-                'delete-success'         => 'Kişi başarıyla silindi.',
-                'delete-failed'          => 'Kişi silinemedi.',
-                'delete-partial-warning' => 'Ancak aşağıdakiler silinemedi çünkü bunların fırsatları (leads) var: :persons.',
+                'title'                    => 'Kişiler',
+                'create-btn'               => 'Kişi Oluştur',
+                'create-success'           => 'Kişi başarıyla oluşturuldu.',
+                'update-success'           => 'Kişi başarıyla güncellendi.',
+                'delete-success'           => 'Kişi başarıyla silindi.',
+                'delete-failed'            => 'Kişi silinemedi.',
+                'some-not-deleted-warning' => 'Bazı kişiler, ilgili fırsatlar olduğu için silinemedi.',
 
                 'datagrid' => [
                     'contact-numbers'   => 'İletişim Numaraları',
