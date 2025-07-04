@@ -153,7 +153,7 @@ class LeadController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(LeadForm $request): RedirectResponse
+    public function store(LeadForm $request): RedirectResponse|JsonResponse
     {
         Event::dispatch('lead.create.before');
 
@@ -184,6 +184,13 @@ class LeadController extends Controller
         }
 
         $lead = $this->leadRepository->create($data);
+
+        if (request()->ajax()) {
+            return response()->json([
+                'message' => trans('admin::app.leads.create-success'),
+                'data'    => new LeadResource($lead),
+            ]);
+        }
 
         Event::dispatch('lead.create.after', $lead);
 
