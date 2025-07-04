@@ -45,7 +45,7 @@
                 {!! view_render_event('admin.leads.view.title.before', ['lead' => $lead]) !!}
 
                 <!-- Title -->
-                <h3 class="text-lg font-bold dark:text-white">
+                <h1 class="text-lg font-bold dark:text-white">
                     {{ $lead->title }}
                 </h1>
 
