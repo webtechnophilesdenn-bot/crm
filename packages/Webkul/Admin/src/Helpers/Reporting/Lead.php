@@ -92,8 +92,7 @@ class Lead extends AbstractReporting
     /**
      * Determine the appropriate period based on date range
      *
-     * @param string $period
-     * @return string
+     * @param  string  $period
      */
     protected function determinePeriod($period = 'auto'): string
     {
@@ -360,7 +359,7 @@ class Lead extends AbstractReporting
             ->resetModel()
             ->select(
                 DB::raw("$groupColumn AS date"),
-                DB::raw("COUNT(DISTINCT id) AS count"),
+                DB::raw('COUNT(DISTINCT id) AS count'),
                 DB::raw("SUM($valueColumn) AS total")
             )
             ->whereIn('lead_pipeline_stage_id', $this->stageIds)
@@ -388,11 +387,6 @@ class Lead extends AbstractReporting
 
     /**
      * Generate time intervals based on period
-     *
-     * @param Carbon $startDate
-     * @param Carbon $endDate
-     * @param string $period
-     * @return array
      */
     protected function generateTimeIntervals(Carbon $startDate, Carbon $endDate, string $period): array
     {
@@ -401,7 +395,7 @@ class Lead extends AbstractReporting
 
         while ($current <= $endDate) {
             $interval = [
-                'key' => $this->formatDateForGrouping($current, $period),
+                'key'   => $this->formatDateForGrouping($current, $period),
                 'label' => $this->formatDateForLabel($current, $period),
             ];
 
@@ -432,10 +426,6 @@ class Lead extends AbstractReporting
 
     /**
      * Get the SQL group column based on period
-     *
-     * @param string $dateColumn
-     * @param string $period
-     * @return string
      */
     protected function getGroupColumn(string $dateColumn, string $period): string
     {
@@ -455,10 +445,6 @@ class Lead extends AbstractReporting
 
     /**
      * Format date for grouping key
-     *
-     * @param Carbon $date
-     * @param string $period
-     * @return string
      */
     protected function formatDateForGrouping(Carbon $date, string $period): string
     {
@@ -478,10 +464,6 @@ class Lead extends AbstractReporting
 
     /**
      * Format date for display label
-     *
-     * @param Carbon $date
-     * @param string $period
-     * @return string
      */
     protected function formatDateForLabel(Carbon $date, string $period): string
     {
@@ -489,7 +471,7 @@ class Lead extends AbstractReporting
             case 'day':
                 return $date->format('M d');
             case 'week':
-                return 'Week ' . $date->format('W, Y');
+                return 'Week '.$date->format('W, Y');
             case 'month':
                 return $date->format('M Y');
             case 'year':
