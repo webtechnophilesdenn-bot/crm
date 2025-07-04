@@ -1265,6 +1265,7 @@ return [
                 'title'                => 'Funis',
                 'create-btn'           => 'Adicionar Funil',
                 'create-success'       => 'Funil adicionado com sucesso.',
+                'default-required'     => 'É necessário pelo menos um pipeline padrão.',
                 'update-success'       => 'Funil atualizado com sucesso.',
                 'delete-success'       => 'Funil excluído com sucesso.',
                 'delete-failed'        => 'Não foi possível excluir o funil.',
