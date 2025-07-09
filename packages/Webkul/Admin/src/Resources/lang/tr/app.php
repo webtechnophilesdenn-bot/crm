@@ -1273,6 +1273,7 @@ return [
                 'title'                => 'Pipelines',
                 'create-btn'           => 'Pipeline Oluştur',
                 'create-success'       => 'Pipeline başarıyla oluşturuldu.',
+                'default-required'     => 'En az bir varsayılan boru hattı gereklidir.',
                 'update-success'       => 'Pipeline başarıyla güncellendi.',
                 'delete-success'       => 'Pipeline başarıyla silindi.',
                 'delete-failed'        => 'Pipeline silinemedi.',
@@ -1507,16 +1508,22 @@ return [
                         'warehouses'    => 'Depolar',
                     ],
 
-                    'types'       => [
-                        'address'  => 'Adres',
-                        'date'     => 'Tarih',
-                        'email'    => 'E-posta',
-                        'lookup'   => 'Arama',
-                        'phone'    => 'Telefon',
-                        'price'    => 'Fiyat',
-                        'select'   => 'Seç',
-                        'text'     => 'Metin',
-                        'textarea' => 'Metin Alanı',
+                    'types' => [
+                        'text'        => 'Metin',
+                        'textarea'    => 'Metin alanı',
+                        'price'       => 'Fiyat',
+                        'boolean'     => 'Mantıksal',
+                        'select'      => 'Seçim',
+                        'multiselect' => 'Çoklu seçim',
+                        'checkbox'    => 'Onay kutusu',
+                        'email'       => 'E-posta',
+                        'address'     => 'Adres',
+                        'phone'       => 'Telefon',
+                        'lookup'      => 'Arama',
+                        'datetime'    => 'Tarih ve saat',
+                        'date'        => 'Tarih',
+                        'image'       => 'Görsel',
+                        'file'        => 'Dosya',
                     ],
                 ],
             ],
@@ -1951,7 +1958,7 @@ return [
 
                 'toolbar' => [
                     'search' => [
-                        'title' => 'Ara',
+                        'title' => 'Başlığa göre ara',
                     ],
 
                     'filters' => [

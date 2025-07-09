@@ -1269,6 +1269,7 @@ return [
                 'title'                => 'Quy Trình',
                 'create-btn'           => 'Tạo Quy Trình',
                 'create-success'       => 'Quy trình đã được tạo thành công.',
+                'default-required'     => 'Cần ít nhất một pipeline mặc định.',
                 'update-success'       => 'Quy trình đã được cập nhật thành công.',
                 'delete-success'       => 'Quy trình đã được xóa thành công.',
                 'delete-failed'        => 'Quy trình không thể bị xóa.',
@@ -1503,16 +1504,22 @@ return [
                         'warehouses'    => 'Kho hàng',
                     ],
 
-                    'types'       => [
-                        'address'  => 'Địa chỉ',
-                        'date'     => 'Ngày',
-                        'email'    => 'Email',
-                        'lookup'   => 'Tra cứu',
-                        'phone'    => 'Điện thoại',
-                        'price'    => 'Giá',
-                        'select'   => 'Chọn',
-                        'text'     => 'Văn bản',
-                        'textarea' => 'Khung văn bản',
+                    'types' => [
+                        'text'        => 'Văn bản',
+                        'textarea'    => 'Vùng văn bản',
+                        'price'       => 'Giá',
+                        'boolean'     => 'Boolean',
+                        'select'      => 'Chọn',
+                        'multiselect' => 'Chọn nhiều',
+                        'checkbox'    => 'Hộp kiểm',
+                        'email'       => 'Email',
+                        'address'     => 'Địa chỉ',
+                        'phone'       => 'Điện thoại',
+                        'lookup'      => 'Tìm kiếm',
+                        'datetime'    => 'Ngày giờ',
+                        'date'        => 'Ngày',
+                        'image'       => 'Hình ảnh',
+                        'file'        => 'Tệp tin',
                     ],
                 ],
             ],
@@ -1844,7 +1851,7 @@ return [
 
                 'toolbar' => [
                     'search' => [
-                        'title' => 'Tìm Kiếm',
+                        'title' => 'Tìm kiếm theo tiêu đề',
                     ],
 
                     'filters' => [

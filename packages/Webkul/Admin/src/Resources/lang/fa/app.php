@@ -1275,6 +1275,7 @@ return [
                 'create-btn'           => 'ایجاد پایپ‌لاین',
                 'create-success'       => 'پایپ‌لاین با موفقیت ایجاد شد.',
                 'update-success'       => 'پایپ‌لاین با موفقیت به‌روزرسانی شد.',
+                'default-required'     => 'حداقل یک پایپ‌لاین پیش‌فرض مورد نیاز است.',
                 'delete-success'       => 'پایپ‌لاین با موفقیت حذف شد.',
                 'delete-failed'        => 'پایپ‌لاین قابل حذف نیست.',
                 'default-delete-error' => 'پایپ‌لاین پیش‌فرض قابل حذف نیست.',
@@ -1508,16 +1509,22 @@ return [
                         'warehouses'    => 'انبارها',
                     ],
 
-                    'types'       => [
-                        'address'  => 'آدرس',
-                        'date'     => 'تاریخ',
-                        'email'    => 'ایمیل',
-                        'lookup'   => 'جستجو',
-                        'phone'    => 'تلفن',
-                        'price'    => 'قیمت',
-                        'select'   => 'انتخاب',
-                        'text'     => 'متن',
-                        'textarea' => 'میدان متن',
+                    'types' => [
+                        'text'        => 'متن',
+                        'textarea'    => 'ناحیه متنی',
+                        'price'       => 'قیمت',
+                        'boolean'     => 'بولی',
+                        'select'      => 'انتخاب',
+                        'multiselect' => 'چند انتخابی',
+                        'checkbox'    => 'چک‌باکس',
+                        'email'       => 'ایمیل',
+                        'address'     => 'آدرس',
+                        'phone'       => 'تلفن',
+                        'lookup'      => 'جستجو',
+                        'datetime'    => 'تاریخ و زمان',
+                        'date'        => 'تاریخ',
+                        'image'       => 'تصویر',
+                        'file'        => 'فایل',
                     ],
                 ],
             ],
@@ -1952,7 +1959,7 @@ return [
 
                 'toolbar' => [
                     'search' => [
-                        'title' => 'جستجو',
+                        'title' => 'جستجو بر اساس عنوان',
                     ],
 
                     'filters' => [

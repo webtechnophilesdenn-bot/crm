@@ -1272,6 +1272,7 @@ return [
                 'title'                => 'Canales',
                 'create-btn'           => 'Crear Canal',
                 'create-success'       => 'Canal creado exitosamente.',
+                'default-required'     => 'Se requiere al menos una canalización predeterminada.',
                 'update-success'       => 'Canal actualizado exitosamente.',
                 'delete-success'       => 'Canal eliminado exitosamente.',
                 'delete-failed'        => 'No se puede eliminar el Canal.',
@@ -1506,16 +1507,22 @@ return [
                         'warehouses'    => 'Almacenes',
                     ],
 
-                    'types'       => [
-                        'address'  => 'Dirección',
-                        'date'     => 'Fecha',
-                        'email'    => 'Correo Electrónico',
-                        'lookup'   => 'Búsqueda',
-                        'phone'    => 'Teléfono',
-                        'price'    => 'Precio',
-                        'select'   => 'Seleccionar',
-                        'text'     => 'Texto',
-                        'textarea' => 'Área de Texto',
+                    'types' => [
+                        'text'        => 'Texto',
+                        'textarea'    => 'Área de texto',
+                        'price'       => 'Precio',
+                        'boolean'     => 'Booleano',
+                        'select'      => 'Seleccionar',
+                        'multiselect' => 'Selección múltiple',
+                        'checkbox'    => 'Casilla de verificación',
+                        'email'       => 'Correo electrónico',
+                        'address'     => 'Dirección',
+                        'phone'       => 'Teléfono',
+                        'lookup'      => 'Búsqueda',
+                        'datetime'    => 'Fecha y hora',
+                        'date'        => 'Fecha',
+                        'image'       => 'Imagen',
+                        'file'        => 'Archivo',
                     ],
                 ],
             ],
@@ -1950,7 +1957,7 @@ return [
 
                 'toolbar' => [
                     'search' => [
-                        'title' => 'Buscar',
+                        'title' => 'Buscar por título',
                     ],
 
                     'filters' => [

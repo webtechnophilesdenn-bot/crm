@@ -1266,6 +1266,7 @@ return [
                 'title'                => 'Funis',
                 'create-btn'           => 'Adicionar Funil',
                 'create-success'       => 'Funil adicionado com sucesso.',
+                'default-required'     => 'É necessário pelo menos um pipeline padrão.',
                 'update-success'       => 'Funil atualizado com sucesso.',
                 'delete-success'       => 'Funil excluído com sucesso.',
                 'delete-failed'        => 'Não foi possível excluir o funil.',
@@ -1500,16 +1501,22 @@ return [
                         'warehouses'    => 'Depósitos',
                     ],
 
-                    'types'       => [
-                        'address'  => 'Endereço',
-                        'date'     => 'Data',
-                        'email'    => 'E-mail',
-                        'lookup'   => 'Pesquisa',
-                        'phone'    => 'Telefone',
-                        'price'    => 'Preço',
-                        'select'   => 'Seleção',
-                        'text'     => 'Texto',
-                        'textarea' => 'Área de Texto',
+                    'types' => [
+                        'text'        => 'Texto',
+                        'textarea'    => 'Área de texto',
+                        'price'       => 'Preço',
+                        'boolean'     => 'Booleano',
+                        'select'      => 'Selecionar',
+                        'multiselect' => 'Seleção múltipla',
+                        'checkbox'    => 'Caixa de seleção',
+                        'email'       => 'Email',
+                        'address'     => 'Endereço',
+                        'phone'       => 'Telefone',
+                        'lookup'      => 'Busca',
+                        'datetime'    => 'Data e hora',
+                        'date'        => 'Data',
+                        'image'       => 'Imagem',
+                        'file'        => 'Arquivo',
                     ],
                 ],
             ],
@@ -1836,7 +1843,7 @@ return [
 
                 'toolbar' => [
                     'search' => [
-                        'title' => 'Pesquisar',
+                        'title' => 'Buscar por título',
                     ],
 
                     'filters' => [
