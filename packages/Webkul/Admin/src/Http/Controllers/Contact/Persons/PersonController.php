@@ -200,27 +200,32 @@ class PersonController extends Controller
             $statusCode = 200;
 
             switch (true) {
-                case ($deletedCount > 0 && $blockedCount === 0):
+                case $deletedCount > 0 && $blockedCount === 0:
                     $message = trans('admin::app.contacts.persons.index.all-delete-success');
+
                     break;
 
-                case ($deletedCount > 0 && $blockedCount > 0):
+                case $deletedCount > 0 && $blockedCount > 0:
                     $message = trans('admin::app.contacts.persons.index.partial-delete-warning');
+
                     break;
 
-                case ($deletedCount === 0 && $blockedCount > 0):
+                case $deletedCount === 0 && $blockedCount > 0:
                     $message = trans('admin::app.contacts.persons.index.none-delete-warning');
+
                     $statusCode = 400;
+
                     break;
 
                 default:
                     $message = trans('admin::app.contacts.persons.index.no-selection');
+
                     $statusCode = 400;
+
                     break;
             }
 
             return response()->json(['message' => $message], $statusCode);
-
         } catch (Exception $exception) {
             return response()->json([
                 'message' => trans('admin::app.contacts.persons.index.delete-failed'),
