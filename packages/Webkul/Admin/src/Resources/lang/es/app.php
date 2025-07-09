@@ -547,9 +547,11 @@ return [
                 'create-btn'               => 'Crear Persona',
                 'create-success'           => 'Persona creada con éxito.',
                 'update-success'           => 'Persona actualizada con éxito.',
-                'delete-success'           => 'Persona eliminada con éxito.',
-                'delete-failed'            => 'No se puede eliminar la persona.',
-                'some-not-deleted-warning' => 'No se pudieron eliminar algunas personas porque están vinculadas a oportunidades.',
+                'all-delete-success'       => 'Todas las personas seleccionadas fueron eliminadas exitosamente.',
+                'partial-delete-warning'   => 'Algunas personas fueron eliminadas con éxito. Otras no se pudieron eliminar porque están vinculadas a clientes potenciales.',
+                'none-delete-warning'      => 'Ninguna de las personas seleccionadas pudo ser eliminada porque están vinculadas a clientes potenciales.',
+                'no-selection'             => 'No se seleccionaron personas para eliminar.',
+                'delete-failed'            => 'No se pudieron eliminar las personas seleccionadas.',
 
                 'datagrid' => [
                     'contact-numbers'   => 'Números de Contacto',

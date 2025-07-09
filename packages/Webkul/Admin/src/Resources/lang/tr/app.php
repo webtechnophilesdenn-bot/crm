@@ -547,9 +547,11 @@ return [
                 'create-btn'               => 'Kişi Oluştur',
                 'create-success'           => 'Kişi başarıyla oluşturuldu.',
                 'update-success'           => 'Kişi başarıyla güncellendi.',
-                'delete-success'           => 'Kişi başarıyla silindi.',
-                'delete-failed'            => 'Kişi silinemedi.',
-                'some-not-deleted-warning' => 'Bazı kişiler, ilgili fırsatlar olduğu için silinemedi.',
+                'all-delete-success'       => 'Seçilen tüm kişiler başarıyla silindi.',
+                'partial-delete-warning'   => 'Bazı kişiler başarıyla silindi. Diğerleri potansiyel müşterilerle bağlantılı olduğu için silinemedi.',
+                'none-delete-warning'      => 'Seçilen kişilerin hiçbiri potansiyel müşterilerle bağlantılı olduğu için silinemedi.',
+                'no-selection'             => 'Silinecek kişi seçilmedi.',
+                'delete-failed'            => 'Seçilen kişiler silinemedi.',
 
                 'datagrid' => [
                     'contact-numbers'   => 'İletişim Numaraları',
