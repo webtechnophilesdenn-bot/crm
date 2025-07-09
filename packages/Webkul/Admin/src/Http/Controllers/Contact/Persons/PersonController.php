@@ -167,21 +167,23 @@ class PersonController extends Controller
     }
 
     /**
-     * Mass Delete the specified resources.
+     * Mass destroy the specified resources from storage.
      */
     public function massDestroy(MassDestroyRequest $request): JsonResponse
     {
         try {
             $persons = $this->personRepository->findWhereIn('id', $request->input('indices', []));
 
-            $hasBlocked = false;
+            $deletedCount = 0;
+
+            $blockedCount = 0;
 
             foreach ($persons as $person) {
                 if (
                     $person->leads
                     && $person->leads->count() > 0
                 ) {
-                    $hasBlocked = true;
+                    $blockedCount++;
 
                     continue;
                 }
@@ -191,15 +193,34 @@ class PersonController extends Controller
                 $this->personRepository->delete($person->id);
 
                 Event::dispatch('contact.person.delete.after', $person);
+
+                $deletedCount++;
             }
 
-            $message = trans('admin::app.contacts.persons.index.delete-success');
+            $statusCode = 200;
 
-            if ($hasBlocked) {
-                $message .= ' '.trans('admin::app.contacts.persons.index.some-not-deleted-warning');
+            switch (true) {
+                case ($deletedCount > 0 && $blockedCount === 0):
+                    $message = trans('admin::app.contacts.persons.index.all-delete-success');
+                    break;
+
+                case ($deletedCount > 0 && $blockedCount > 0):
+                    $message = trans('admin::app.contacts.persons.index.partial-delete-warning');
+                    break;
+
+                case ($deletedCount === 0 && $blockedCount > 0):
+                    $message = trans('admin::app.contacts.persons.index.none-delete-warning');
+                    $statusCode = 400;
+                    break;
+
+                default:
+                    $message = trans('admin::app.contacts.persons.index.no-selection');
+                    $statusCode = 400;
+                    break;
             }
 
-            return response()->json(['message' => $message]);
+            return response()->json(['message' => $message], $statusCode);
+
         } catch (Exception $exception) {
             return response()->json([
                 'message' => trans('admin::app.contacts.persons.index.delete-failed'),
