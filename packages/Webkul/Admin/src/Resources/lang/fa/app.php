@@ -749,12 +749,13 @@ return [
 
         'groups' => [
             'index' => [
-                'create-btn'        => 'ایجاد گروه',
-                'title'             => 'گروه‌ها',
-                'create-success'    => 'گروه با موفقیت ایجاد شد.',
-                'update-success'    => 'گروه با موفقیت به‌روزرسانی شد.',
-                'destroy-success'   => 'گروه با موفقیت حذف شد.',
-                'delete-failed'     => 'گروه قابل حذف نیست.',
+                'create-btn'                     => 'ایجاد گروه',
+                'title'                          => 'گروه‌ها',
+                'create-success'                 => 'گروه با موفقیت ایجاد شد.',
+                'update-success'                 => 'گروه با موفقیت به‌روزرسانی شد.',
+                'destroy-success'                => 'گروه با موفقیت حذف شد.',
+                'delete-failed'                  => 'امکان حذف گروه وجود ندارد.',
+                'delete-failed-associated-users' => 'امکان حذف گروه وجود ندارد زیرا توسط کاربران استفاده می‌شود.',
 
                 'datagrid'   => [
                     'delete'      => 'حذف',

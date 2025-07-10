@@ -745,12 +745,13 @@ return [
 
         'groups' => [
             'index' => [
-                'create-btn'        => 'Tạo Nhóm',
-                'title'             => 'Nhóm',
-                'create-success'    => 'Nhóm đã được tạo thành công.',
-                'update-success'    => 'Nhóm đã được cập nhật thành công.',
-                'destroy-success'   => 'Nhóm đã được xóa thành công.',
-                'delete-failed'     => 'Không thể xóa nhóm.',
+                'create-btn'                     => 'Tạo Nhóm',
+                'title'                          => 'Nhóm',
+                'create-success'                 => 'Tạo nhóm thành công.',
+                'update-success'                 => 'Cập nhật nhóm thành công.',
+                'destroy-success'                => 'Xóa nhóm thành công.',
+                'delete-failed'                  => 'Không thể xóa nhóm.',
+                'delete-failed-associated-users' => 'Không thể xóa nhóm vì đang được sử dụng bởi người dùng.',
 
                 'datagrid'   => [
                     'delete'      => 'Xóa',

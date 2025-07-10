@@ -744,12 +744,13 @@ return [
 
         'groups' => [
             'index' => [
-                'create-btn'        => 'إنشاء مجموعة',
-                'title'             => 'المجموعات',
-                'create-success'    => 'تم إنشاء المجموعة بنجاح.',
-                'update-success'    => 'تم تحديث المجموعة بنجاح.',
-                'destroy-success'   => 'تم حذف المجموعة بنجاح.',
-                'delete-failed'     => 'لا يمكن حذف المجموعة.',
+                'create-btn'                     => 'إنشاء مجموعة',
+                'title'                          => 'المجموعات',
+                'create-success'                 => 'تم إنشاء المجموعة بنجاح.',
+                'update-success'                 => 'تم تحديث المجموعة بنجاح.',
+                'destroy-success'                => 'تم حذف المجموعة بنجاح.',
+                'delete-failed'                  => 'لا يمكن حذف المجموعة.',
+                'delete-failed-associated-users' => 'لا يمكن حذف المجموعة لأنها مستخدمة من قبل المستخدمين.',
 
                 'datagrid'   => [
                     'delete'      => 'حذف',

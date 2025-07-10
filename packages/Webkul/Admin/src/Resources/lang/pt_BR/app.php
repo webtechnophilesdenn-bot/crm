@@ -742,12 +742,13 @@ return [
 
         'groups' => [
             'index' => [
-                'create-btn'        => 'Adicionar Grupo',
-                'title'             => 'Grupos',
-                'create-success'    => 'Grupo adicionado com sucesso.',
-                'update-success'    => 'Grupo atualizado com sucesso.',
-                'destroy-success'   => 'Grupo excluído com sucesso.',
-                'delete-failed'     => 'Não foi possível excluir o grupo.',
+                'create-btn'                     => 'Criar Grupo',
+                'title'                          => 'Grupos',
+                'create-success'                 => 'Grupo criado com sucesso.',
+                'update-success'                 => 'Grupo atualizado com sucesso.',
+                'destroy-success'                => 'Grupo excluído com sucesso.',
+                'delete-failed'                  => 'Não foi possível excluir o grupo.',
+                'delete-failed-associated-users' => 'Não foi possível excluir o grupo, pois está sendo utilizado por usuários.',
 
                 'datagrid'   => [
                     'delete'      => 'Excluir',
