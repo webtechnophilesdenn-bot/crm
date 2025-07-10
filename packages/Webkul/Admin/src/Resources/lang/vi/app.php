@@ -540,12 +540,15 @@ return [
     'contacts' => [
         'persons' => [
             'index' => [
-                'title'          => 'Người',
-                'create-btn'     => 'Tạo Người',
-                'create-success' => 'Người đã được tạo thành công.',
-                'update-success' => 'Người đã được cập nhật thành công.',
-                'delete-success' => 'Người đã được xóa thành công.',
-                'delete-failed'  => 'Không thể xóa người này.',
+                'title'                    => 'Người',
+                'create-btn'               => 'Tạo Người',
+                'create-success'           => 'Người đã được tạo thành công.',
+                'update-success'           => 'Người đã được cập nhật thành công.',
+                'all-delete-success'       => 'Tất cả người được chọn đã được xóa thành công.',
+                'partial-delete-warning'   => 'Một số người đã được xóa thành công. Những người khác không thể xóa vì có liên kết với khách hàng tiềm năng.',
+                'none-delete-warning'      => 'Không thể xóa bất kỳ người nào được chọn vì họ có liên kết với khách hàng tiềm năng.',
+                'no-selection'             => 'Chưa chọn người nào để xóa.',
+                'delete-failed'            => 'Xóa người được chọn không thành công.',
 
                 'datagrid' => [
                     'contact-numbers'   => 'Số Liên hệ',
