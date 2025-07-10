@@ -859,12 +859,13 @@ return [
 
         'sources' => [
             'index' => [
-                'create-btn'     => 'إنشاء مصدر',
-                'create-success' => 'تم إنشاء المصدر بنجاح.',
-                'delete-failed'  => 'لا يمكن حذف المصدر.',
-                'delete-success' => 'تم حذف المصدر بنجاح.',
-                'title'          => 'المصادر',
-                'update-success' => 'تم تحديث المصدر بنجاح.',
+                'title'                          => 'المصادر',
+                'create-btn'                     => 'إنشاء مصدر',
+                'create-success'                 => 'تم إنشاء المصدر بنجاح.',
+                'delete-failed'                  => 'لا يمكن حذف المصدر.',
+                'delete-success'                 => 'تم حذف المصدر بنجاح.',
+                'update-success'                 => 'تم تحديث المصدر بنجاح.',
+                'delete-failed-associated-leads' => 'لا يمكن حذف المصدر لأنه مرتبط بعملاء محتملين موجودين. يرجى فصل أو تحديث هؤلاء العملاء قبل الحذف.',
 
                 'datagrid' => [
                     'delete' => 'حذف',

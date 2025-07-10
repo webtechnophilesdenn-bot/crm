@@ -863,12 +863,13 @@ return [
 
         'sources' => [
             'index' => [
-                'create-btn'     => 'Kaynak Oluştur',
-                'create-success' => 'Kaynak başarıyla oluşturuldu.',
-                'delete-failed'  => 'Kaynak silinemedi.',
-                'delete-success' => 'Kaynak başarıyla silindi.',
-                'title'          => 'Kaynaklar',
-                'update-success' => 'Kaynak başarıyla güncellendi.',
+                'title'                          => 'Kaynaklar',
+                'create-btn'                     => 'Kaynak Oluştur',
+                'create-success'                 => 'Kaynak başarıyla oluşturuldu.',
+                'delete-failed'                  => 'Kaynak silinemedi.',
+                'delete-success'                 => 'Kaynak başarıyla silindi.',
+                'update-success'                 => 'Kaynak başarıyla güncellendi.',
+                'delete-failed-associated-leads' => 'Kaynak silinemiyor çünkü mevcut adaylarla ilişkili. Lütfen bu adayları silmeden önce bağlantılarını kaldırın veya güncelleyin.',
 
                 'datagrid' => [
                     'delete' => 'Sil',

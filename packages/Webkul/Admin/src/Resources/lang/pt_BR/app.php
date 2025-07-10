@@ -857,12 +857,13 @@ return [
 
         'sources' => [
             'index' => [
-                'create-btn'     => 'Adicionar Origem',
-                'create-success' => 'Origem adicionada com sucesso.',
-                'delete-failed'  => 'Não é possível excluir a origem.',
-                'delete-success' => 'Origem excluída com sucesso.',
-                'title'          => 'Origens',
-                'update-success' => 'Origem atualizada com sucesso.',
+                'title'                          => 'Fontes',
+                'create-btn'                     => 'Criar Fonte',
+                'create-success'                 => 'Fonte criada com sucesso.',
+                'delete-failed'                  => 'Não foi possível excluir a fonte.',
+                'delete-success'                 => 'Fonte excluída com sucesso.',
+                'update-success'                 => 'Fonte atualizada com sucesso.',
+                'delete-failed-associated-leads' => 'Não é possível excluir a fonte porque está associada a leads existentes. Por favor, desvincule ou atualize esses leads antes da exclusão.',
 
                 'datagrid' => [
                     'delete' => 'Excluir',

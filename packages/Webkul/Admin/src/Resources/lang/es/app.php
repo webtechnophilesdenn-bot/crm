@@ -863,12 +863,13 @@ return [
 
         'sources' => [
             'index' => [
-                'create-btn'     => 'Crear Fuente',
-                'create-success' => 'Fuente creada con éxito.',
-                'delete-failed'  => 'No se puede eliminar la fuente.',
-                'delete-success' => 'Fuente eliminada con éxito.',
-                'title'          => 'Fuentes',
-                'update-success' => 'Fuente actualizada con éxito.',
+                'title'                          => 'Fuentes',
+                'create-btn'                     => 'Crear Fuente',
+                'create-success'                 => 'Fuente creada con éxito.',
+                'delete-failed'                  => 'No se puede eliminar la fuente.',
+                'delete-success'                 => 'Fuente eliminada con éxito.',
+                'update-success'                 => 'Fuente actualizada con éxito.',
+                'delete-failed-associated-leads' => 'No se puede eliminar la fuente porque está asociada a clientes potenciales existentes. Por favor, desvincúlelos o actualícelos antes de eliminar.',
 
                 'datagrid' => [
                     'delete' => 'Eliminar',

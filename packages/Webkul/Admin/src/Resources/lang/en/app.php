@@ -861,12 +861,13 @@ return [
 
         'sources' => [
             'index' => [
-                'create-btn'     => 'Create Source',
-                'create-success' => 'Source created successfully.',
-                'delete-failed'  => 'Source can not be deleted.',
-                'delete-success' => 'Source deleted successfully.',
-                'title'          => 'Sources',
-                'update-success' => 'Source updated successfully.',
+                'title'                          => 'Sources',
+                'create-btn'                     => 'Create Source',
+                'create-success'                 => 'Source created successfully.',
+                'delete-failed'                  => 'Source can not be deleted.',
+                'delete-success'                 => 'Source deleted successfully.',
+                'update-success'                 => 'Source updated successfully.',
+                'delete-failed-associated-leads' => 'Source cannot be deleted because it is associated with existing leads. Please detach or update those leads before deletion.',
 
                 'datagrid' => [
                     'delete' => 'Delete',
