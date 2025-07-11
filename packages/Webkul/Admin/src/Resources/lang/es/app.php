@@ -751,12 +751,13 @@ return [
 
         'groups' => [
             'index' => [
-                'create-btn'        => 'Crear Grupo',
-                'title'             => 'Grupos',
-                'create-success'    => 'Grupo creado con éxito.',
-                'update-success'    => 'Grupo actualizado con éxito.',
-                'destroy-success'   => 'Grupo eliminado con éxito.',
-                'delete-failed'     => 'No se puede eliminar el grupo.',
+                'create-btn'                     => 'Crear Grupo',
+                'title'                          => 'Grupos',
+                'create-success'                 => 'Grupo creado con éxito.',
+                'update-success'                 => 'Grupo actualizado con éxito.',
+                'destroy-success'                => 'Grupo eliminado con éxito.',
+                'delete-failed'                  => 'No se puede eliminar el grupo.',
+                'delete-failed-associated-users' => 'No se puede eliminar el grupo, ya que está siendo utilizado por usuarios.',
 
                 'datagrid'   => [
                     'delete'      => 'Eliminar',

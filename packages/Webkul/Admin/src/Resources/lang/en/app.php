@@ -749,12 +749,13 @@ return [
 
         'groups' => [
             'index' => [
-                'create-btn'        => 'Create Group',
-                'title'             => 'Groups',
-                'create-success'    => 'Group created successfully.',
-                'update-success'    => 'Group updated successfully.',
-                'destroy-success'   => 'Group deleted successfully.',
-                'delete-failed'     => 'Group can not be deleted.',
+                'create-btn'                     => 'Create Group',
+                'title'                          => 'Groups',
+                'create-success'                 => 'Group created successfully.',
+                'update-success'                 => 'Group updated successfully.',
+                'destroy-success'                => 'Group deleted successfully.',
+                'delete-failed'                  => 'Group can not be deleted.',
+                'delete-failed-associated-users' => 'Group can not be deleted, as this is being used by users.',
 
                 'datagrid'   => [
                     'delete'      => 'Delete',

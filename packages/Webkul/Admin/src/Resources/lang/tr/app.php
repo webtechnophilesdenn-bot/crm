@@ -751,12 +751,13 @@ return [
 
         'groups' => [
             'index' => [
-                'create-btn'        => 'Grup Oluştur',
-                'title'             => 'Gruplar',
-                'create-success'    => 'Grup başarıyla oluşturuldu.',
-                'update-success'    => 'Grup başarıyla güncellendi.',
-                'destroy-success'   => 'Grup başarıyla silindi.',
-                'delete-failed'     => 'Grup silinemedi.',
+                'create-btn'                     => 'Grup Oluştur',
+                'title'                          => 'Gruplar',
+                'create-success'                 => 'Grup başarıyla oluşturuldu.',
+                'update-success'                 => 'Grup başarıyla güncellendi.',
+                'destroy-success'                => 'Grup başarıyla silindi.',
+                'delete-failed'                  => 'Grup silinemedi.',
+                'delete-failed-associated-users' => 'Grup silinemiyor, çünkü kullanıcılar tarafından kullanılıyor.',
 
                 'datagrid'   => [
                     'delete'      => 'Sil',
