@@ -860,12 +860,13 @@ return [
 
         'sources' => [
             'index' => [
-                'create-btn'     => 'Tạo Nguồn',
-                'create-success' => 'Nguồn đã được tạo thành công.',
-                'delete-failed'  => 'Không thể xóa nguồn.',
-                'delete-success' => 'Nguồn đã được xóa thành công.',
-                'title'          => 'Các Nguồn',
-                'update-success' => 'Nguồn đã được cập nhật thành công.',
+                'title'                          => 'Nguồn',
+                'create-btn'                     => 'Tạo Nguồn',
+                'create-success'                 => 'Tạo nguồn thành công.',
+                'delete-failed'                  => 'Không thể xóa nguồn.',
+                'delete-success'                 => 'Xóa nguồn thành công.',
+                'update-success'                 => 'Cập nhật nguồn thành công.',
+                'delete-failed-associated-leads' => 'Không thể xóa nguồn vì nó đang được liên kết với các khách hàng tiềm năng. Vui lòng hủy liên kết hoặc cập nhật các khách hàng đó trước khi xóa.',
 
                 'datagrid' => [
                     'delete' => 'Xóa',
