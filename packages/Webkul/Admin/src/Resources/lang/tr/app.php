@@ -1975,6 +1975,17 @@ return [
                         'to'            => 'Kime',
                     ],
                 ],
+
+                'stages' => [
+                    'won-lost'       => 'Kazandı/Kayıp',
+                    'won'            => 'Kazandı',
+                    'lost'           => 'Kayıp',
+                    'need-more-info' => 'Daha Fazla Bilgi Gerekiyor',
+                    'closed-at'      => 'Kapanış Tarihi',
+                    'won-value'      => 'Kazanan Değer',
+                    'lost-reason'    => 'Kayıp Nedeni',
+                    'save-btn'       => 'Kaydet',
+                ],
             ],
 
             'view-switcher' => [

@@ -1868,6 +1868,17 @@ return [
                         'to'            => 'Đến',
                     ],
                 ],
+
+                'stages' => [
+                    'won-lost'       => 'Thắng/Thua',
+                    'won'            => 'Thắng',
+                    'lost'           => 'Thua',
+                    'need-more-info' => 'Cần Thêm Thông Tin',
+                    'closed-at'      => 'Đóng Vào',
+                    'won-value'      => 'Giá Trị Thắng',
+                    'lost-reason'    => 'Lý Do Thua',
+                    'save-btn'       => 'Lưu',
+                ],
             ],
 
             'view-switcher' => [

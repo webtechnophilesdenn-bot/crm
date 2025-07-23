@@ -1976,6 +1976,17 @@ return [
                         'to'            => 'تا',
                     ],
                 ],
+
+                'stages' => [
+                    'won-lost'       => 'برد/باخت',
+                    'won'            => 'برد',
+                    'lost'           => 'باخت',
+                    'need-more-info' => 'نیاز به اطلاعات بیشتر',
+                    'closed-at'      => 'بسته شده در',
+                    'won-value'      => 'ارزش برد',
+                    'lost-reason'    => 'دلیل باخت',
+                    'save-btn'       => 'ذخیره',
+                ],
             ],
 
             'view-switcher' => [

@@ -1971,6 +1971,17 @@ return [
                         'to'            => 'إلى',
                     ],
                 ],
+
+                'stages' => [
+                    'won-lost'       => 'ربحت/خسرت',
+                    'won'            => 'ربحت',
+                    'lost'           => 'خسرت',
+                    'need-more-info' => 'تحتاج إلى مزيد من التفاصيل',
+                    'closed-at'      => 'أغلقت في',
+                    'won-value'      => 'قيمة الربح',
+                    'lost-reason'    => 'سبب الخسارة',
+                    'save-btn'       => 'حفظ',
+                ],
             ],
 
             'view-switcher' => [

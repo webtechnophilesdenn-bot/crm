@@ -1860,6 +1860,17 @@ return [
                         'to'            => 'Para',
                     ],
                 ],
+
+                'stages' => [
+                    'won-lost'       => 'Ganho/Perdido',
+                    'won'            => 'Ganho',
+                    'lost'           => 'Perdido',
+                    'need-more-info' => 'Precisa de Mais Informações',
+                    'closed-at'      => 'Fechado em',
+                    'won-value'      => 'Valor Ganhado',
+                    'lost-reason'    => 'Motivo da Perda',
+                    'save-btn'       => 'Salvar',
+                ],
             ],
 
             'view-switcher' => [
