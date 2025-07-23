@@ -121,7 +121,7 @@
                                     id="uploaded-file-link"
                                     class="mt-1 cursor-pointer text-sm text-brandColor transition-all hover:underline"
                                 >
-                                    {{ $import?->file_path }}
+                                   {{ $import?->file_name }}
                                 </a>
                             @endif
                         </div>
