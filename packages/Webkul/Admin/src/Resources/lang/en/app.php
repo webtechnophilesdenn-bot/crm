@@ -1116,13 +1116,17 @@ return [
         'marketing' => [
             'events' => [
                 'index' => [
-                    'create-btn'          => 'Create Event',
-                    'title'               => 'Events',
-                    'create-success'      => 'Event created successfully.',
-                    'update-success'      => 'Event updated successfully.',
-                    'delete-success'      => 'Event deleted successfully.',
-                    'delete-failed'       => 'Event can not be deleted.',
-                    'mass-delete-success' => 'Events deleted successfully',
+                    'create-btn'                         => 'Create Event',
+                    'title'                              => 'Events',
+                    'create-success'                     => 'Event created successfully.',
+                    'update-success'                     => 'Event updated successfully.',
+                    'delete-success'                     => 'Event deleted successfully.',
+                    'delete-failed'                      => 'Event can not be deleted.',
+                    'delete-failed-associated-campaigns' => 'Event can not be deleted, as it is associated with campaigns.',
+                    'mass-delete-success'                => 'Events deleted successfully.',
+                    'partial-delete-warning'             => 'Some events could not be deleted, as they are associated with campaigns.',
+                    'none-delete-warning'                => 'None of the selected events could be deleted, as they are associated with campaigns.',
+                    'no-selection'                       => 'No events were selected for deletion.',
 
                     'datagrid'   => [
                         'delete'       => 'Delete',
