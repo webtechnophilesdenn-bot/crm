@@ -85,7 +85,6 @@
                             group="leads"
                             @scroll="handleScroll(stage, $event)"
                             @change="handleUpdate(stage, $event)"
-                            ref="draggable"
                         >
                             <template #header>
                                 <div
