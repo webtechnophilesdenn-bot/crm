@@ -1114,13 +1114,17 @@ return [
         'marketing' => [
             'events' => [
                 'index' => [
-                    'create-btn'          => 'إنشاء حدث',
-                    'title'               => 'الأحداث',
-                    'create-success'      => 'تم إنشاء الحدث بنجاح.',
-                    'update-success'      => 'تم تحديث الحدث بنجاح.',
-                    'delete-success'      => 'تم حذف الحدث بنجاح.',
-                    'delete-failed'       => 'لا يمكن حذف الحدث.',
-                    'mass-delete-success' => 'تم حذف الأحداث بنجاح',
+                    'create-btn'                         => 'إنشاء حدث',
+                    'title'                              => 'الأحداث',
+                    'create-success'                     => 'تم إنشاء الحدث بنجاح.',
+                    'update-success'                     => 'تم تحديث الحدث بنجاح.',
+                    'delete-success'                     => 'تم حذف الحدث بنجاح.',
+                    'delete-failed'                      => 'لا يمكن حذف الحدث.',
+                    'delete-failed-associated-campaigns' => 'لا يمكن حذف الحدث لأنه مرتبط بحملات.',
+                    'mass-delete-success'                => 'تم حذف الأحداث بنجاح.',
+                    'partial-delete-warning'             => 'تعذر حذف بعض الأحداث لأنها مرتبطة بحملات.',
+                    'none-delete-warning'                => 'تعذر حذف أي من الأحداث المحددة لأنها مرتبطة بحملات.',
+                    'no-selection'                       => 'لم يتم تحديد أي أحداث للحذف.',
 
                     'datagrid'   => [
                         'delete'       => 'حذف',
