@@ -374,22 +374,26 @@ return [
 
             'header' => [
                 'mega-search' => [
-                    'title'   => 'Búsqueda Mega',
+                    'title' => 'Búsqueda Avanzada',
 
                     'tabs' => [
-                        'leads'    => 'Oportunidades',
-                        'quotes'   => 'Cotizaciones',
-                        'persons'  => 'Personas',
-                        'products' => 'Productos',
+                        'leads'          => 'Clientes Potenciales',
+                        'quotes'         => 'Cotizaciones',
+                        'persons'        => 'Personas',
+                        'products'       => 'Productos',
+                        'settings'       => 'Configuraciones',
+                        'configurations' => 'Ajustes',
                     ],
 
-                    'explore-all-products'          => 'Explorar todos los Productos',
-                    'explore-all-leads'             => 'Explorar todas las Oportunidades',
-                    'explore-all-contacts'          => 'Explorar todos los Contactos',
-                    'explore-all-quotes'            => 'Explorar todas las Cotizaciones',
+                    'explore-all-products'          => 'Explorar todos los productos',
+                    'explore-all-leads'             => 'Explorar todos los clientes potenciales',
+                    'explore-all-contacts'          => 'Explorar todas las personas',
+                    'explore-all-quotes'            => 'Explorar todas las cotizaciones',
+                    'explore-all-settings'          => 'Explorar todas las configuraciones',
+                    'explore-all-configurations'    => 'Explorar todos los ajustes',
                     'explore-all-matching-products' => 'Explorar todos los productos que coinciden con ":query" (:count)',
-                    'explore-all-matching-leads'    => 'Explorar todas las oportunidades que coinciden con ":query" (:count)',
-                    'explore-all-matching-contacts' => 'Explorar todos los contactos que coinciden con ":query" (:count)',
+                    'explore-all-matching-leads'    => 'Explorar todos los clientes potenciales que coinciden con ":query" (:count)',
+                    'explore-all-matching-contacts' => 'Explorar todas las personas que coinciden con ":query" (:count)',
                     'explore-all-matching-quotes'   => 'Explorar todas las cotizaciones que coinciden con ":query" (:count)',
                 ],
             ],
