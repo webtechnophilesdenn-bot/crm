@@ -1114,13 +1114,17 @@ return [
         'marketing' => [
             'events' => [
                 'index' => [
-                    'create-btn'          => 'Tạo Sự kiện',
-                    'title'               => 'Sự kiện',
-                    'create-success'      => 'Sự kiện đã được tạo thành công.',
-                    'update-success'      => 'Sự kiện đã được cập nhật thành công.',
-                    'delete-success'      => 'Sự kiện đã được xóa thành công.',
-                    'delete-failed'       => 'Không thể xóa sự kiện.',
-                    'mass-delete-success' => 'Các sự kiện đã được xóa thành công',
+                    'create-btn'                         => 'Tạo Sự kiện',
+                    'title'                              => 'Sự kiện',
+                    'create-success'                     => 'Tạo sự kiện thành công.',
+                    'update-success'                     => 'Cập nhật sự kiện thành công.',
+                    'delete-success'                     => 'Xóa sự kiện thành công.',
+                    'delete-failed'                      => 'Không thể xóa sự kiện.',
+                    'delete-failed-associated-campaigns' => 'Không thể xóa sự kiện vì có liên kết với chiến dịch.',
+                    'mass-delete-success'                => 'Đã xóa sự kiện thành công.',
+                    'partial-delete-warning'             => 'Một số sự kiện không thể xóa vì có liên kết với chiến dịch.',
+                    'none-delete-warning'                => 'Không sự kiện nào trong số đã chọn được xóa vì có liên kết với chiến dịch.',
+                    'no-selection'                       => 'Không có sự kiện nào được chọn để xóa.',
 
                     'datagrid'   => [
                         'delete'       => 'Xóa',

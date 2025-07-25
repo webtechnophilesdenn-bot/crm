@@ -1118,13 +1118,17 @@ return [
         'marketing' => [
             'events' => [
                 'index' => [
-                    'create-btn'          => 'Etkinlik Oluştur',
-                    'title'               => 'Etkinlikler',
-                    'create-success'      => 'Etkinlik başarıyla oluşturuldu.',
-                    'update-success'      => 'Etkinlik başarıyla güncellendi.',
-                    'delete-success'      => 'Etkinlik başarıyla silindi.',
-                    'delete-failed'       => 'Etkinlik silinemedi.',
-                    'mass-delete-success' => 'Etkinlikler başarıyla silindi',
+                    'create-btn'                         => 'Etkinlik Oluştur',
+                    'title'                              => 'Etkinlikler',
+                    'create-success'                     => 'Etkinlik başarıyla oluşturuldu.',
+                    'update-success'                     => 'Etkinlik başarıyla güncellendi.',
+                    'delete-success'                     => 'Etkinlik başarıyla silindi.',
+                    'delete-failed'                      => 'Etkinlik silinemedi.',
+                    'delete-failed-associated-campaigns' => 'Etkinlik, kampanyalarla ilişkili olduğu için silinemiyor.',
+                    'mass-delete-success'                => 'Etkinlikler başarıyla silindi.',
+                    'partial-delete-warning'             => 'Bazı etkinlikler kampanyalarla ilişkili olduğu için silinemedi.',
+                    'none-delete-warning'                => 'Seçilen etkinliklerin hiçbiri kampanyalarla ilişkili olduğu için silinemedi.',
+                    'no-selection'                       => 'Silmek için herhangi bir etkinlik seçilmedi.',
 
                     'datagrid'   => [
                         'delete'       => 'Sil',
