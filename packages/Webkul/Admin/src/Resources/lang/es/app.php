@@ -1978,6 +1978,17 @@ return [
                         'to'            => 'A',
                     ],
                 ],
+
+                'stages' => [
+                    'won-lost'       => 'Ganado/Perdido',
+                    'won'            => 'Ganado',
+                    'lost'           => 'Perdido',
+                    'need-more-info' => 'Necesita Más Información',
+                    'closed-at'      => 'Cerrado En',
+                    'won-value'      => 'Valor Ganado',
+                    'lost-reason'    => 'Razón de la Pérdida',
+                    'save-btn'       => 'Guardar',
+                ],
             ],
 
             'view-switcher' => [
