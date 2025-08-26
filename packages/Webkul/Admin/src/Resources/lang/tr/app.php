@@ -2190,9 +2190,9 @@ return [
         ],
     ],
     'errors' => [
-        'dashboard' => 'Kontrol Paneli',
-        'go-back'   => 'Geri Dön',
-        'support'   => 'Sorun devam ederse, yardım için bize <a href=":link" class=":class">:email</a> adresinden ulaşın.',
+        'dashboard'   => 'Kontrol Paneli',
+        'go-back'     => 'Geri Dön',
+        'support'     => 'Sorun devam ederse, yardım için bize <a href=":link" class=":class">:email</a> adresinden ulaşın.',
         '404'         => [
             'description' => 'Oops! Aradığınız sayfa tatilde. Aradığınız şeyi bulamadık gibi görünüyor.',
             'title'       => '404 Sayfa Bulunamadı',

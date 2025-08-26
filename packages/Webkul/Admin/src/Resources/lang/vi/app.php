@@ -2190,9 +2190,9 @@ return [
         ],
     ],
     'errors' => [
-        'dashboard' => 'Bảng điều khiển',
-        'go-back'   => 'Quay lại',
-        'support'   => 'Nếu sự cố vẫn tiếp diễn, vui lòng liên hệ với chúng tôi tại <a href=":link" class=":class">:email</a> để được hỗ trợ.',
+        'dashboard'   => 'Bảng điều khiển',
+        'go-back'     => 'Quay lại',
+        'support'     => 'Nếu sự cố vẫn tiếp diễn, vui lòng liên hệ với chúng tôi tại <a href=":link" class=":class">:email</a> để được hỗ trợ.',
         '404'         => [
             'description' => 'Rất tiếc! Trang bạn đang tìm kiếm hiện không có ở đây. Có vẻ như chúng tôi không thể tìm thấy những gì bạn đang tìm kiếm.',
             'title'       => '404 Không Tìm Thấy Trang',
