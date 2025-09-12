@@ -275,9 +275,11 @@ class Installer extends Command
                 default: env('DB_PREFIX', ''),
                 hint: 'or press enter to continue',
                 validate: function ($value) {
-                    if (strlen($value) > 0 
-                        && (strlen($value) < 1 
-                        || strlen($value) > 6)
+                    $input = strlen($value);
+
+                    if ($input
+                        && ($input < 1
+                        || $input > 6)
                     ) {
                         return 'The database prefix must be between 1 and 6 characters.';
                     }
