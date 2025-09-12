@@ -161,7 +161,7 @@ class Installer extends Command
     }
 
     /**
-     *  Checking .env file and if not found then create .env file.
+     *  Checking .env file and if not found then create .env file
      *
      * @return ?array
      */
