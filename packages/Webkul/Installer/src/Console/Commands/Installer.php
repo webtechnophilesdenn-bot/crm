@@ -279,11 +279,11 @@ class Installer extends Command
                         && (strlen($value) < 1 
                         || strlen($value) > 6)
                     ) {
-                        return 'The database prefix must be between 1 and 6 characters';
+                        return 'The database prefix must be between 1 and 6 characters.';
                     }
 
                     if (preg_match('/[^a-zA-Z0-9_]/', $value)) {
-                        return 'The database prefix may only contain letters, numbers, and underscores';
+                        return 'The database prefix may only contain letters, numbers, and underscores.';
                     }
 
                     return null;
