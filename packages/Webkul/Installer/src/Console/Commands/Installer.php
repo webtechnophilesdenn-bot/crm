@@ -161,7 +161,7 @@ class Installer extends Command
     }
 
     /**
-     *  Checking .env file and if not found then create .env file.
+     *  Checking .env file and if not found then create .env file
      *
      * @return ?array
      */
@@ -273,7 +273,21 @@ class Installer extends Command
             'DB_PREFIX' => text(
                 label: 'Please enter the database prefix',
                 default: env('DB_PREFIX', ''),
-                hint: 'or press enter to continue'
+                hint: 'or press enter to continue',
+                validate: function ($value) {
+                    if (strlen($value) > 0 
+                        && (strlen($value) < 1 
+                        || strlen($value) > 6)
+                    ) {
+                        return 'The database prefix must be between 1 and 6 characters';
+                    }
+
+                    if (preg_match('/[^a-zA-Z0-9_]/', $value)) {
+                        return 'The database prefix may only contain letters, numbers, and underscores';
+                    }
+
+                    return null;
+                }
             ),
 
             'DB_USERNAME' => text(
